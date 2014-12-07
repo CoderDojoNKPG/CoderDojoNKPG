@@ -16,7 +16,9 @@ body {
   min-height: 500px;
 }
 
-
+input, select, textarea {
+	color: black;
+}
 
 
 
