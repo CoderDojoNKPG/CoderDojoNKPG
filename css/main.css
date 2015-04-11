@@ -7,24 +7,26 @@
 
 
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 
 #twitter-widget-0 {
-  min-height: 500px;
+    min-height: 500px;
 }
 
 input, select, textarea {
-	color: black;
+    color: black;
 }
 
 .table {
-  font-size: 14px;
+    font-size: 14px;
 }
 
-
+footer {
+    text-align: center;
+}
 
 
 
