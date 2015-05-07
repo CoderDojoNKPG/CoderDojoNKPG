@@ -28,7 +28,7 @@ footer {
     text-align: center;
 }
 
-
-
-
-
+.section {
+    margin-top: -40px;
+    padding-top: 40px;
+}
