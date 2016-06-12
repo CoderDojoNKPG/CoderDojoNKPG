@@ -32,3 +32,20 @@ footer {
     margin-top: -40px;
     padding-top: 40px;
 }
+
+.btn-dagar
+{
+  background-color: #4E5D6C;
+}
+
+.btn-dagar:hover
+{
+    background-color: #B97232;
+}
+
+.d-program
+{
+    padding-bottom: 10px;
+}
+
+
