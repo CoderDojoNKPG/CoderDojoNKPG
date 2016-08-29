@@ -25,6 +25,13 @@ header h1 {
 	display: inline;
 }
 
+header h1 span { /*beta tag, remove after beta*/
+	color: #d77234;
+	font-size: large;
+	vertical-align: text-top;
+	line-height: 2em;
+}
+
 td {
 	font-size: larger;
 	padding-left: 0.5em;
@@ -208,3 +215,8 @@ div.tips a div:nth-child(2) {
 	text-align: center;
 	margin-bottom: 2em;
 }
+
+article.info table tr td:nth-child(1) {
+	font-size: xx-large;
+}
+
