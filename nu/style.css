@@ -25,6 +25,11 @@ header h1 {
 	display: inline;
 }
 
+td {
+	font-size: larger;
+	padding-left: 0.5em;
+}
+
 #timeline {
 	background-color: #4e5d6c;
 	padding: 2em 2em 3em 2em;
@@ -44,7 +49,7 @@ section#content article {
 	flex-grow: 1;
 	margin-top: 1em;
 	margin-left: 1em;
-	padding: 0px 10px 10px 10px;
+	padding: 0px 15px 15px 15px;
 	border-radius: 8px;
 	transition: all 0.5s ease;
 }
@@ -54,16 +59,21 @@ section#content article::after {
 	clear:all;
 }
 
-section#content article:nth-child(3n+0) {
-	background-color: #E4E4E4;
-}
-
-section#content article:nth-child(3n+1) {
+section#content article.advanced {
 	background-color: #a6c1c6;
 }
 
-section#content article:nth-child(3n+2) {
+section#content article.beginner {
 	background-color: #C5D8D1;
+}
+
+section#content article.info {
+	background-color: #E4E4E4;
+}
+
+section#content article.special {
+	background-color: #E4E4E4;
+
 }
 
 section#content article.big {
@@ -75,7 +85,7 @@ section#content article.big {
 section#content article h2 {
 	background-color: rgba(255, 255, 255, 0.25);
 	padding: 0.5em;
-	margin: 0em -10px 10px -10px;
+	margin: 0em -15px 15px -15px;
 	border-radius: 8px;
 	font-weight: 350;
 }
@@ -145,8 +155,8 @@ div.tips {
 	border-top: 1px solid rgba(43,62,80,0.16);
 	border-bottom: 1px solid rgba(43,62,80,0.16);
 	background-color: rgba(43,62,80,0.08);
-	margin-left: -10px;
-	margin-right: -10px;
+	margin-left: -15px;
+	margin-right: -15px;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding-top: 0.5em;

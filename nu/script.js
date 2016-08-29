@@ -3,7 +3,7 @@ function updateTimeline() {
 	var divProgressbar = document.getElementById("dojo-progressbar");
 	var divMarker = document.getElementById("dojo-marker");
 
-	var currentDate = new Date(2016,7,27,12,20); //new Date();
+	var currentDate = new Date();
 	var dojoStartHour = 11; //Dojo starts at 11:00
 	var dojoDuration = 2; //Dojo takes 2 hours
 
