@@ -7,6 +7,18 @@ body {
 	font-size: 110%;
 }
 
+body::before {
+	content: "";
+	float: left;
+	border-left: white dotted 1.5px;
+	position: fixed;
+	left: 45px;
+	top: 0px;
+	bottom: 0px;
+	z-index: -1;
+
+}
+
 header {
 	background-color: #2D2D2D;
 	color: white;
@@ -17,6 +29,7 @@ header #logo {
 	width: 1.8em;
 	height: 1.8em;
 	margin-right: 1em;
+	margin-left: 1em;
 }
 
 header h1 {
@@ -36,6 +49,22 @@ header h1 span { /*beta tag, remove after beta*/
 	line-height: 2em;
 }
 
+body>h2 {
+	color: #fff;
+	padding-left: 30px;
+	line-height: 30px;
+}
+
+body>h2::before {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px; 
+	background-color: white;
+	content: "";
+	display: inline-block;
+	margin-right: 0.8em;
+}
+
 td {
 	font-size: larger;
 	padding-left: 0.5em;
@@ -47,16 +76,16 @@ td {
 	transition: all 0.5s ease;
 }
 
-section#content {
+section {
 	display: flex;
 	flex-flow: row wrap;
 	padding-right: 1em;
 	padding-bottom: 1em;
 }
 
-section#content article {
+section article {
 	min-width: 15em;
-	width: 30em;
+	width: 35em;
 	flex-grow: 1;
 	margin-top: 1em;
 	margin-left: 1em;
@@ -65,35 +94,35 @@ section#content article {
 	transition: all 0.5s ease;
 }
 
-section#content article::after {
+body section article::after {
 	content: "";
 	clear:all;
 }
 
-section#content article.advanced {
+article.advanced {
 	background-color: #a6c1c6;
 }
 
-section#content article.beginner {
+article.beginner {
 	background-color: #C5D8D1;
 }
 
-section#content article.info {
+article.info {
 	background-color: #E4E4E4;
 }
 
-section#content article.special {
+article.special {
 	background-color: #E4E4E4;
 
 }
 
-section#content article.big {
+section article.big {
 	width: 100%;
 	background-color: #BB632D;
 	color: #eee;
 }
 
-section#content article h2 {
+section article h2 {
 	background-color: rgba(255, 255, 255, 0.25);
 	padding: 0.5em;
 	margin: 0em -15px 15px -15px;
