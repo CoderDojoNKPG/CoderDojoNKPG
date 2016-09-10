@@ -25,10 +25,14 @@ header h1 {
 	display: inline;
 }
 
-header h1 span { /*beta tag, remove after beta*/
+header h1 span, .tag { /*beta tag, remove after beta*/
 	color: #d77234;
-	font-size: large;
+	font-size: small;
 	vertical-align: text-top;
+}
+
+header h1 span { /*beta tag, remove after beta*/
+	font-size: large;
 	line-height: 2em;
 }
 
