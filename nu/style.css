@@ -7,16 +7,19 @@ body {
 	font-size: 110%;
 }
 
-body::before {
+section#dojo-tips {
+	position: relative;
+}
+
+section#dojo-tips::before {
 	content: "";
 	float: left;
 	border-left: white dotted 1.5px;
-	position: fixed;
+	position: absolute;
 	left: 45px;
 	top: 0px;
-	bottom: 0px;
+	bottom: 20px;
 	z-index: -1;
-
 }
 
 header {
@@ -49,13 +52,27 @@ header h1 span { /*beta tag, remove after beta*/
 	line-height: 2em;
 }
 
-body>h2 {
+nav {
+	margin-left: 1em;
+	text-align: center;
+	color: white;
+}
+
+nav a {
+	color: white;
+}
+
+
+
+h2 {
 	color: #fff;
 	padding-left: 30px;
 	line-height: 30px;
 }
 
-body>h2::before {
+
+
+#dojo-tips>h2::before {
 	border-radius: 50%;
 	width: 30px;
 	height: 30px; 
@@ -63,6 +80,14 @@ body>h2::before {
 	content: "";
 	display: inline-block;
 	margin-right: 0.8em;
+}
+
+#dojo-tips {
+	margin-bottom: 4em;
+}
+
+#social {
+	background-color: #456
 }
 
 td {
@@ -76,14 +101,14 @@ td {
 	transition: all 0.5s ease;
 }
 
-section {
+section.container {
 	display: flex;
 	flex-flow: row wrap;
 	padding-right: 1em;
 	padding-bottom: 1em;
 }
 
-section article {
+section.container article {
 	min-width: 15em;
 	width: 35em;
 	flex-grow: 1;
@@ -94,9 +119,13 @@ section article {
 	transition: all 0.5s ease;
 }
 
-body section article::after {
-	content: "";
-	clear:all;
+section:after, article:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
 }
 
 article.advanced {
@@ -116,18 +145,22 @@ article.special {
 
 }
 
-section article.big {
+section#notifications article {
 	width: 100%;
 	background-color: #BB632D;
 	color: #eee;
+	padding-left: 0.5em;
 }
 
-section article h2 {
+section article h3 {
 	background-color: rgba(255, 255, 255, 0.25);
 	padding: 0.5em;
 	margin: 0em -15px 15px -15px;
-	border-radius: 8px;
 	font-weight: 350;
+}
+
+section#dojo-tips article h3 {
+	border-radius: 8px;
 }
 
 img.mascot {
@@ -181,12 +214,15 @@ img.mascot {
 }
 
 .invisible {
+	display: none;
+
+	/* FIX transition
 	height: 0px !important;
 	margin: 0px !important;
 	padding: 0px !important;
 	-webkit-transform: scale(1.0,0.0);
 	-moz-transform: scale(1.0,0.0);
-	transform: scale(1.0,0.0);
+	transform: scale(1.0,0.0);*/
 }
 
 div.tips {
