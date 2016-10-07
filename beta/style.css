@@ -20,6 +20,12 @@ h1 {
 	padding: 0.2em;
 }
 
+hr {
+	border:none;
+	border-top: 1px solid #E7EFEC;
+	width: 50%;
+}
+
 #main>h2 {
 	text-align: center;
 	margin: 1.5em;
@@ -88,7 +94,7 @@ section#main:before {
 }
 
 section#main {
-	background-color: #2D3947;
+	background-color: #232b35;
 }
 
 img#logo {
@@ -124,7 +130,7 @@ section#mission {
 	background-color: #232b35;
 	padding-left: 1em;
 	padding-right: 1em;
-	padding-bottom: 3em;
+	padding-bottom: 2em;
 }
 
 section#mission h2 {
@@ -199,12 +205,9 @@ footer {
 section.social {
 	text-align: center;
 	margin-bottom: 1.5em;
-	background-color: #232b35;
-	padding-bottom: 3em;
-}
-
-section.social p {
-	margin-top: 0;
+	background-color: #BB632D;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 section.single {
@@ -219,7 +222,7 @@ img.mascot {
 
 a.button {
 	border-radius: 8px;
-	background-color: #395355;
+	/*background-color: #395355;*/
 	padding: 0.8em;
 	text-decoration: none;
 	margin: 0.3em;
@@ -230,6 +233,7 @@ a.button {
 
 a.button:hover {
 	background-color: #BB632D;
+	font-weight: bold;
 }
 
 a.button.highlight {
