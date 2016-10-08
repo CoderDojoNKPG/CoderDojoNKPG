@@ -95,6 +95,7 @@ section#main:before {
 
 section#main {
 	background-color: #232b35;
+	background-image: url(img/background.png);
 }
 
 img#logo {
@@ -127,10 +128,12 @@ section.group {
 }
 
 section#mission {
-	background-color: #232b35;
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 2em;
+	border-top: 2px solid #BB632D;
+	background-image: url(img/background2.png);
+	background-position: bottom;
 }
 
 section#mission h2 {
@@ -180,7 +183,7 @@ section.highlight article {
 	color: #26303B;
 	max-width: 400px;
 	min-width: 20em;
-	flex-basis:: 25em;
+	flex-basis: 25em;
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
@@ -205,8 +208,7 @@ footer {
 section.social {
 	text-align: center;
 	margin-bottom: 1.5em;
-	background-color: #BB632D;
-	padding-bottom: 1em;
+	padding-bottom: 1.5em;
 	padding-top: 1em;
 }
 
@@ -217,12 +219,13 @@ section.single {
 img.mascot {
 	margin-bottom: -26px;
 	width: 200px;
-	height: auto;
+	height: 200px;
 }
+
 
 a.button {
 	border-radius: 8px;
-	/*background-color: #395355;*/
+	background-color: #395355;
 	padding: 0.8em;
 	text-decoration: none;
 	margin: 0.3em;
@@ -233,7 +236,6 @@ a.button {
 
 a.button:hover {
 	background-color: #BB632D;
-	font-weight: bold;
 }
 
 a.button.highlight {
