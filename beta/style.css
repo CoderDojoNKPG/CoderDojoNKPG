@@ -15,9 +15,15 @@ body {
 h1 {
 	text-align: center;
 	font-weight: 400;
-	background-color: #2D2D2D;
 	margin:0;
 	padding: 0.2em;
+}
+
+header {
+	background-image: url(img/background3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba(38,48,59,1.0);
 }
 
 hr {
@@ -37,19 +43,24 @@ a {
 }
 
 nav {
-	background-color: rgba(45,45,45,0.6);
+	/*background-color: rgba(38,48,59,0.6);*/
+	border-bottom: 1px solid rgba(187,99,45,1.0);
 	text-align: center;
-	padding: 0.4em;
+	padding: 8px;
+	margin-top: 0.4em;
 }
 
 nav a {
 	color: #DEDEDE;
 	text-decoration: none;
-	padding-top: 0.3em;
+	padding: 8px;
 }
 
 nav a.active {
-	border-top: 2px solid #BB632D;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: rgba(187,99,45,1.0);
+	color: white;
 }
 
 nav a:hover {
@@ -86,7 +97,7 @@ div.cover {
 section#main:before {
 	content: '';
 	height: 0px;
-	margin-bottom: 600px;
+	margin-bottom: 560px;
 	display: block;
 	background: none;
 	z-index: -100;
