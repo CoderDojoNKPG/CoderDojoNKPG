@@ -9,7 +9,7 @@ body {
 	font-family: Lato, sans-serif;
 	color: #DEDEDE;
 	margin: 0;
-	background-color: #E7EFEC;
+	background-color: #E6EEEC;
 }
 
 h1 {
@@ -24,11 +24,20 @@ header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgba(38,48,59,1.0);
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	padding: 5px 0px;
+}
+
+header>a {
+	color: #DEDEDE;
+	padding: 5px 15px;
 }
 
 hr {
 	border:none;
-	border-top: 1px solid #E7EFEC;
+	border-top: 1px solid #E6EEEC;
 	width: 50%;
 }
 
@@ -43,28 +52,24 @@ a {
 }
 
 nav {
-	/*background-color: rgba(38,48,59,0.6);*/
-	border-bottom: 1px solid rgba(187,99,45,1.0);
-	text-align: center;
-	padding: 8px;
+	/*border-bottom: 1px solid rgba(187,99,45,1.0);*/
+	padding: 5px;
 	margin-top: 0.4em;
 }
 
 nav a {
 	color: #DEDEDE;
 	text-decoration: none;
-	padding: 8px;
+	padding: 5px;
 }
 
 nav a.active {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	background-color: rgba(187,99,45,1.0);
+	border-top: 1px solid #BB632D;
 	color: white;
 }
 
 nav a:hover {
-	color: white;
+	color: #BB632D;
 }
 
 nav a ~ a {
@@ -80,7 +85,7 @@ header {
 
 section#cover {
 	position: fixed;
-	height: 700px;
+	height: 600px;
 	width: 100%;
 	z-index: -1;
 	top: 0;
@@ -90,14 +95,14 @@ div.cover {
 	background-size: cover; 
 	background-position: center;
 	width: 100%;
-	height: 700px;
+	height: 600px;
 }
 
 
 section#main:before {
 	content: '';
 	height: 0px;
-	margin-bottom: 560px;
+	margin-bottom: 500px;
 	display: block;
 	background: none;
 	z-index: -100;
@@ -168,7 +173,7 @@ section#mission article p {
 
 
 section.highlight {
-	background-color: #E7EFEC;
+	background-color: #E6EEEC;
 	border-radius: 8px;
 	display: flex;
 	flex-flow: row wrap;
@@ -211,7 +216,7 @@ section.group div.img, section.highlight div.img {
 }
 
 footer {
-	background-color: #E7EFEC;
+	background-color: #E6EEEC;
 	color: #26303B;
 	font-size: small;
 	text-align: center;
