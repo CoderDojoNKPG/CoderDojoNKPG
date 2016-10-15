@@ -12,13 +12,6 @@ body {
 	background-color: #E6EEEC;
 }
 
-h1 {
-	text-align: center;
-	font-weight: 400;
-	margin:0;
-	padding: 0.2em;
-}
-
 header {
 	background-image: url(img/background3.png);
 	background-position: center;
@@ -37,13 +30,14 @@ header>a {
 
 hr {
 	border:none;
-	border-top: 1px solid #E6EEEC;
-	width: 50%;
+	border-top: 0.5px solid #E6EEEC;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 #main>h2 {
 	text-align: center;
-	margin: 1.5em;
+	margin: 1em;
 }
 
 a {
@@ -224,7 +218,7 @@ footer {
 
 section.social {
 	text-align: center;
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 	padding-bottom: 1.5em;
 	padding-top: 1em;
 }
@@ -234,6 +228,7 @@ section.single {
 }
 
 img.mascot {
+	margin-top: 2em;
 	margin-bottom: -26px;
 	width: 200px;
 	height: 200px;
