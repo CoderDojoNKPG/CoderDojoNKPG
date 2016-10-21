@@ -275,3 +275,23 @@ a.button.right {
 	float: right;
 }
 
+
+.comment {
+	background-color: #E6EEEC;
+	padding: 0.5em 1em 0.5em 1em;
+	color: #2F3E4E;
+	position: relative;
+	border-radius: 8px;
+}
+
+.comment::after {
+	position: absolute;
+	content: "";
+	bottom:-0.8em;
+	left: 10%;
+ 	width: 0; 
+ 	height: 0; 
+ 	border-left: 1em solid transparent;
+ 	border-right: 1em solid transparent;
+	border-top: 1em solid #E6EEEC;
+}
