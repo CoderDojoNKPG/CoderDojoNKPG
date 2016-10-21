@@ -158,7 +158,7 @@ footer>article, section.group>article {
 	min-width: 200px;
 	flex-basis: 15em;
 	padding: 1.5em;
-	max-width: 500px;
+	max-width: 20em;
 }
 
 section#mission article p {
@@ -167,14 +167,13 @@ section#mission article p {
 
 
 section.highlight {
-	background-color: #E6EEEC;
-	border-radius: 8px;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
-	margin: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	padding-left: 8px;
 	padding-right: 8px;
+	justify-content: center;
 }
 
 @media (max-width: 800px) {
@@ -182,8 +181,9 @@ section.highlight {
 		flex-flow: column nowrap;
 	}
 
-	footer>article, section.group>article {
+	footer>article, section.group>article, section.group>img {
 		max-width: none;
+		width: none;
 	}
 }
 
@@ -198,6 +198,10 @@ section.highlight article {
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
+	background-color: #E6EEEC;
+	margin: 0.8em;
+	border-radius: 8px;
+
 }
 
 section.group div.img, section.highlight div.img {
@@ -207,6 +211,10 @@ section.group div.img, section.highlight div.img {
 	background-size: cover;
 	flex-basis: 200px;
 	opacity: 0.9;
+	border-radius: 8px;
+	margin: 0em 0.8em;
+	max-width: 800px;
+
 }
 
 footer {
@@ -225,6 +233,7 @@ section.social {
 
 section.single {
 	text-align: center;
+	margin-top: 3em;
 }
 
 img.mascot {
