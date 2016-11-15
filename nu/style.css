@@ -70,6 +70,10 @@ h2 {
 	line-height: 30px;
 }
 
+a {
+		color: #d77234;
+}
+
 
 
 #dojo-tips>h2::before {
