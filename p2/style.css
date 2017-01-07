@@ -1,0 +1,161 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400';
+
+/* Använd endast dessa färger: 
+Header: #2D2D2D
+Main-back: ;*/
+
+
+
+/* General styles */
+
+body {
+	font-family: Lato, sans-serif;
+	color: #2E5153;
+	margin: 0;
+	background-color: #F8F8F8;
+}
+
+a {
+	/*color: #BB632D;*/
+	text-decoration: none;
+}
+
+
+/* Header and navigation */
+
+header {
+	background-color: rgba(248,248,248,0.9);
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+header a {
+	font-size: large;
+	color: #2E5153;
+}
+
+nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	flex-grow: 1;
+	margin-left: 2em;
+	margin-right: 2em;
+	max-width: 800px;
+}
+
+nav a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+nav a.active {
+	border-top: 2px solid #2E5153;
+}
+
+nav a:hover {
+	color: #7CB0A2;
+}
+
+
+
+
+
+div#cover {
+	background-size: cover; 
+	background-position: center;
+	width: 100%;
+	height: 600px;
+}
+
+footer, section.group {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: stretch;
+}
+
+footer {
+	background-color: #E6EEEC;
+	color: #26303B;
+	font-size: small;
+	text-align: center;
+}
+
+section.social {
+	text-align: center;
+	margin-bottom: 2em;
+	padding-bottom: 1.5em;
+	padding-top: 1em;
+}
+
+section.single {
+	text-align: center;
+	margin-top: 3em;
+}
+
+img.mascot {
+	margin-top: 2em;
+	margin-bottom: -26px;
+	width: 200px;
+	height: 200px;
+}
+
+
+a.button {
+	border-radius: 8px;
+	background-color: #395355;
+	padding: 0.8em;
+	text-decoration: none;
+	margin: 0.3em;
+	color: #DFDFDF;
+	font-size: large;
+	box-sizing: border-box;
+}
+
+section.social a.button:nth-child(2) {
+	margin-top: 1em;
+}
+
+a.button:hover {
+	background-color: #BB632D;
+}
+
+a.button.highlight {
+	background-color: #BB632D;
+}
+
+a.button.highlight:hover {
+	background-color: #395355;
+}
+
+a.button.right {
+	float: right;
+}
+
+
+.comment {
+	background-color: #E6EEEC;
+	padding: 0.5em 1em 0.5em 1em;
+	color: #2F3E4E;
+	position: relative;
+	border-radius: 8px;
+}
+
+.comment::after {
+	position: absolute;
+	content: "";
+	bottom:-0.8em;
+	left: 10%;
+ 	width: 0; 
+ 	height: 0; 
+ 	border-left: 1em solid transparent;
+ 	border-right: 1em solid transparent;
+	border-top: 1em solid #E6EEEC;
+}
