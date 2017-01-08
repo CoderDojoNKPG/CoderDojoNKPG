@@ -1,43 +1,94 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400';
 
-/* Använd endast dessa färger: 
-Header: #2D2D2D
-Main-back: ;*/
+/* Use only these colors!
 
+Text/Outlines
+	* Normal text (on light background): #23303C;
+	* Links/buttons: #C3773A;
 
+Backgrounds:
+	* Body: #F8F8F8;
+	* Footer: #E6EEEC;
+	* Box (extra light): #C7E2DA;
+	* Box (light): #9ED0C4;
+	* Box (medium): #7BB0A2;
+*/
 
-/* General styles */
+/* Colors */
 
 body {
-	font-family: Lato, sans-serif;
-	color: #2E5153;
-	margin: 0;
-	background-color: #F8F8F8;
+	color: #23303C; /* Normal text */
+	background-color: #F8F8F8; /* Body */
 }
 
 a {
-	/*color: #BB632D;*/
+	color: #C3773A; /* Links/buttons */
+}
+
+header {
+	background-color: rgba(248,248,248,0.9); /* Body #F8F8F8 */
+}
+
+header a {
+	color: #2E5153;
+}
+
+nav a.active {
+	border-color: #2E5153;
+}
+
+nav a:hover {
+	color: #7CB0A2;
+}
+
+.blocks article:nth-of-type(1) {
+	background-color: #C7E2DA; /* extra light */
+}
+
+.blocks article:nth-of-type(2) {
+	background-color: #9ED0C4; /* extra light */
+}
+
+.blocks article:nth-of-type(3) {
+	background-color: #7BB0A2; /* extra light */
+}
+
+
+/* General styles */
+body {
+	font-family: Lato, sans-serif;
+	margin: 0;
+}
+
+a {
 	text-decoration: none;
 }
 
+h2 {
+	font-weight: 300;
+	font-size: 1.6em;
+}
 
 /* Header and navigation */
 
 header {
-	background-color: rgba(248,248,248,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12px;
+	max-width: 1400px;
+	z-index: 10;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-end;
-	padding: 10px;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 10;
 }
 
 header a {
 	font-size: large;
-	color: #2E5153;
 }
 
 nav {
@@ -56,25 +107,64 @@ nav a {
 }
 
 nav a.active {
-	border-top: 2px solid #2E5153;
-}
-
-nav a:hover {
-	color: #7CB0A2;
+	border-width: 2px;
+	border-top-style: solid;
 }
 
 
+/* main, cover and intro areas */
 
-
+#main {
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 div#cover {
 	background-size: cover; 
 	background-position: center;
 	width: 100%;
-	height: 600px;
+	height: 700px;
 }
 
-footer, section.group {
+#intro {
+	text-align: center;
+	font-size: 1.1em;
+	margin-bottom: 2em;
+}
+
+#intro p {
+	font-style: italic;
+	font-size: 1.1em;
+}
+
+#intro img#mascot {
+	height: 220px;
+	width: auto;
+	margin-top: -110px;
+}
+
+/* blocks */
+
+.blocks {
+	display: flex;
+	flex-flow: row wrap;
+	/*padding: 0.5em;*/
+	justify-content: center;
+}
+
+.blocks article {
+	/*max-width: 600px;*/
+	/*margin: 0.5em;*/
+	padding: 1em 3em;
+	flex: 1 1 auto;
+	width: 300px;
+}
+
+
+/* Footer */
+
+footer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -86,13 +176,6 @@ footer {
 	color: #26303B;
 	font-size: small;
 	text-align: center;
-}
-
-section.social {
-	text-align: center;
-	margin-bottom: 2em;
-	padding-bottom: 1.5em;
-	padding-top: 1em;
 }
 
 section.single {
