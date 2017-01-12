@@ -41,15 +41,15 @@ nav a:hover {
 	color: #7CB0A2;
 }
 
-.blocks article:nth-of-type(1) {
+.blocks article:nth-of-type(3n+1) {
 	background-color: #C7E2DA; /* extra light */
 }
 
-.blocks article:nth-of-type(2) {
+.blocks article:nth-of-type(3n+2) {
 	background-color: #9ED0C4; /* extra light */
 }
 
-.blocks article:nth-of-type(3) {
+.blocks article:nth-of-type(3n+3) {
 	background-color: #7BB0A2; /* extra light */
 }
 
@@ -124,7 +124,7 @@ div#cover {
 	background-size: cover; 
 	background-position: center;
 	width: 100%;
-	height: 700px;
+	height: 600px;
 }
 
 #intro {
@@ -156,10 +156,49 @@ div#cover {
 .blocks article {
 	/*max-width: 600px;*/
 	/*margin: 0.5em;*/
+	margin-top: 0.2em;
 	padding: 1em 3em;
 	flex: 1 1 auto;
 	width: 300px;
 }
+
+.blocks article div.img {
+	background-size: cover;
+	background-position: center;
+	height: 12em;
+	margin: -1em -3em 2em -3em;
+	opacity: 0.8;
+	position: relative;
+	filter: saturate(80%) sepia(10%); /*	filter: saturate(20%) sepia(40%);*/
+}
+
+/*
+div.img::after {
+	content: '';
+	height: 2em;
+	width: 100%;
+	background-color: #F8F8F8;
+	opacity: 0.3;
+	bottom: 0em;
+	position: absolute;
+}
+*/
+
+/*
+.blocks article:nth-of-type(3n+1) div.img {
+		opacity: 0.5;
+}
+
+.blocks article:nth-of-type(3n+2) div.img {
+		opacity: 0.6;
+}
+
+.blocks article:nth-of-type(3n+3) div.img {
+		opacity: 0.7; 
+}
+*/
+
+*/
 
 
 /* Footer */
@@ -192,14 +231,19 @@ img.mascot {
 
 
 a.button {
-	border-radius: 8px;
-	background-color: #395355;
 	padding: 0.8em;
 	text-decoration: none;
-	margin: 0.3em;
-	color: #DFDFDF;
+	color: #C3773A;
+	border: 1px solid #C3773A;;
 	font-size: large;
 	box-sizing: border-box;
+	display: inline-block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+a.button~a.button {
+	margin-left: 1em; 
 }
 
 section.social a.button:nth-child(2) {
@@ -208,14 +252,7 @@ section.social a.button:nth-child(2) {
 
 a.button:hover {
 	background-color: #BB632D;
-}
-
-a.button.highlight {
-	background-color: #BB632D;
-}
-
-a.button.highlight:hover {
-	background-color: #395355;
+	color: #F8F8F8;
 }
 
 a.button.right {
