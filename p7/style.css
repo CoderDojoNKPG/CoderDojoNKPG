@@ -45,11 +45,12 @@ header a {
 }
 
 nav a.active {
-	border-color: #2E5153;
+	border-color: #C3773A;
+	color: #C3773A;
 }
 
 nav a:hover {
-	color: #7CB0A2;
+	color: #C3773A;
 }
 
 .blocks article:nth-of-type(3n+1) {
@@ -141,7 +142,7 @@ header {
 }
 
 header a {
-	font-size: large;
+	font-size: 1.3em;
 }
 
 nav {
