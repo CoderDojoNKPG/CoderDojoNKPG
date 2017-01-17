@@ -126,7 +126,7 @@ nav {
 	flex-grow: 1;
 	margin-left: 2em;
 	margin-right: 2em;
-	max-width: 800px;
+	max-width: 1000px;
 }
 
 nav a {
@@ -161,7 +161,7 @@ div#cover {
 
 #intro {
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	margin-bottom: 2em;
 	font-style: italic;
 }
@@ -217,7 +217,7 @@ footer {
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-content: stretch;
-	font-size: small;
+	font-size: 0.8em;
 	text-align: center;
 	padding-top: 3em;
 }
