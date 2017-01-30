@@ -22,6 +22,7 @@ function loadInclude(element, url) {
 				var parser = new DOMParser();
 				var xmlDoc = parser.parseFromString(http_request.responseText, "application/xml");
 				var body = xmlDoc.evaluate("/html/body", xmlDoc, null, XPathResult.ANY_TYPE, null).iterateNext();
+				body = document.importNode(body, true);
 				for (var i = 0; i < body.childNodes.length - 1 ; i++) {
 					element.parentElement.insertBefore(body.childNodes[i].cloneNode(true), element);
 				}
