@@ -6,16 +6,8 @@
 	<title>CoderDojo Norrköping</title>
 </head>
 <body onload="loadIncludes()">
-	<header cd-include="nav.html"> <!--is loaded by script-->
-		<a href="nav.html">[Meny]</a>
-		<!--<a href="http://coderdojonkpg.se"><img src="img/icon/logowithtext.png" id="logo"/></a>
-		<nav>
-			<a href="#" class="active">Hem</a>
-			<a href="#">Börja koda</a> 
-			<a href="#">Bli coach</a>
-			<a href="#">Stöd oss</a>
-			<a href="#">Föreningen</a>
-		</nav>-->
+	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
+		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
 	</header>
 
 	<section id="main">
@@ -109,39 +101,9 @@
 			</article>
 		</section>
 
-	<center>
-		<span class="comment">Vi ses på en dojo!</span><br/>
-		<img src="img/mascot/coderfox.png" class="mascot"/>
-	</center>
 
-	<footer>
-		<article>
-			<h3>Har du frågor?</h3>
-			<p>
-				Kontakta oss på 
-				info@coderdojonkpg.se
-			</p>
-		</article>
-		<article>
-			<h3>Vi finns även på</h3>
-			<p>
-				Twitter<br/>
-				Facebook<br/>
-				Instagram<br/>
-				Eventbrite<br/>
-			</p>
-		</article>
-		<article>
-			<h3>Föreningens styrelse</h3>
-			<p>
-				Ingela Rossing, ordförande<br/>
-				Nils Breyer, dojo- och webbansvarig<br/>
-				Thobias Joelsson, eventansvarig<br/>
-				Dag Forsén, spons- och marknadsföring<br/>
-				Tobias Petterson, kassör<br/>
-				Cecilia Wyser, sekreterare
-			</p>
-		</article>
-	</footer>
+	<div cd-include="footer.html"> <!--footer.html is included by script, change in footer.html to change footer-->
+		<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
+	</div>
 </body>
 </html>
