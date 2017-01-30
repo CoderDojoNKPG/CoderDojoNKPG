@@ -1,11 +1,11 @@
 function loadIncludes() {
-	//find all elements with attribute cd-include="yes"
-	var includeElements = document.evaluate("//*[@cd-include='yes']", document, null, XPathResult.ANY_TYPE, null)
+	//find all elements with attribute cd-include
+	var includeElements = document.evaluate("//*[@cd-include]", document, null, XPathResult.ANY_TYPE, null)
 	var includeElement = includeElements.iterateNext();
 
 	while (includeElement) {
-		if (includeElement["href"]) {
-			loadInclude(includeElement, includeElement["href"])
+		if (includeElement.attributes["cd-include"]) {
+			loadInclude(includeElement, includeElement.attributes["cd-include"].value)
 		}
 		includeElement = includeElements.iterateNext();
 	}
@@ -22,11 +22,7 @@ function loadInclude(element, url) {
 				var parser = new DOMParser();
 				var xmlDoc = parser.parseFromString(http_request.responseText, "application/xml");
 				var body = xmlDoc.evaluate("/html/body", xmlDoc, null, XPathResult.ANY_TYPE, null).iterateNext();
-				body = document.importNode(body, true);
-				for (var i = 0; i < body.childNodes.length - 1 ; i++) {
-					element.parentElement.insertBefore(body.childNodes[i].cloneNode(true), element);
-				}
-				element.parentElement.removeChild(element);
+				element.innerHTML = body.innerHTML;
 			}
 		}
 	};
