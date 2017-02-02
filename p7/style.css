@@ -274,6 +274,10 @@ a.button~a.button {
 	display: none;
 }
 
+.symbol {
+	height: 1.4em; 
+	vertical-align: middle;
+}
 
 /* social icons */
 
