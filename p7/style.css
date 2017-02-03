@@ -184,14 +184,14 @@ div#cover {
 	justify-content: center;
 }
 
-.blocks article {
+.blocks article, footer article {
 	margin-top: 0.2em;
 	padding: 1em 3em;
 	flex: 1 1 auto;
 	width: 300px;
 }
 
-.blocks article>p, .blocks article>img{
+.blocks article>*{
 	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
@@ -219,9 +219,7 @@ footer {
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-content: stretch;
-	font-size: 0.8em;
-	text-align: center;
-	padding-top: 3em;
+	padding: 2em 0em;
 }
 
 img.mascot {
@@ -234,20 +232,22 @@ img.mascot {
 
 /* buttons */
 
+div.buttons {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
 a.button {
 	padding: 12px;
 	text-decoration: none;
 	border-width: 2px;
 	border-style: solid;
 	display: inline-block;
-	margin: 0.2em;
+	margin: 0.3em;
 	background-color: rgba(255,255,255,0.2);
-	min-width: 6em;
+	min-width: 4.2em;
 	text-align: center;
-}
-
-a.button~a.button {
-	margin-left: 1em; 
 }
 
 /* special elements */
