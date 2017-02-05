@@ -9,7 +9,9 @@
 	
 	<!--body will be included into all pages-->
 	<a href="http://coderdojonkpg.se"><img src="img/icon/logowithtext.png" id="logo"/></a>
-	<nav>
+	<input type="checkbox" id="toggleMenu" onchange="updateMenuVisible()" value="Visa meny" />
+	<label for="toggleMenu"> </label>
+	<nav id="mainMenu">
 		<a href="#" class="active">Hem</a>
 		<a href="#">Börja koda</a> 
 		<a href="#">Bli coach</a>

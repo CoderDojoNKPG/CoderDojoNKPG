@@ -28,3 +28,15 @@ function loadInclude(element, url) {
 	};
 	http_request.send(null);
 }
+
+function updateMenuVisible() {
+	var nav = document.getElementById("mainMenu");
+	var toggleMenu = document.getElementById("toggleMenu");
+
+	if (toggleMenu.checked) {
+		nav.classList.add("visible")
+	}
+	else {
+		nav.classList.remove("visible")
+	}
+}
