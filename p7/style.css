@@ -34,6 +34,7 @@ body {
 
 header {
 	background-color: rgba(248,248,248,0.9); /* Body #F8F8F8 */
+	border-bottom-color: #C3773A;
 }
 
 a, nav a.active, nav a:hover {
@@ -83,7 +84,7 @@ h1 {
 	font-weight: 300;
 	font-size: 2.3em;
 	margin-left: 1em;
-	margin-top: 2em;
+	margin-top: 1.5em;
 	margin-bottom: 0.8em;
 	font-weight: 400;
 }
@@ -105,12 +106,16 @@ header {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 15px;
+	padding: 0.85em;
 	max-width: 1500px;
 	z-index: 10;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-end;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	transform: translateZ(1000px);
+	transform-style: preserve-3d;
 }
 
 header a {
@@ -163,7 +168,7 @@ nav a.active {
 		background-repeat: no-repeat;
 		height: 2em;
 		width: 2em;
-		margin-right: 2em;
+		margin-right: 2.5em;
 	}
 	
 	#toggleMenu:checked + label {
@@ -204,6 +209,7 @@ nav a.active {
 	max-width: 1500px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 3em;
 }
 
 div#cover {
@@ -214,6 +220,7 @@ div#cover {
 	-webkit-mask: url("data:image/svg+xml,%0A%3Csvg width='98px' height='100px' viewBox='130 118 100 101' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M130,119 L230,119 L230,219 C230,219 209.228245,214.936611 180,214.936611 C150.771755,214.936611 130,219 130,219 L130,119 Z' id='Rectangle' stroke='none' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E");
 	-webkit-mask-size: cover;
 	-webkit-mask-position: bottom;
+	margin-top: -3em;
 }
 
 #intro {
