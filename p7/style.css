@@ -84,6 +84,7 @@ h1 {
 	font-weight: 300;
 	font-size: 2.3em;
 	margin-left: 1em;
+	margin-right: 1em;
 	margin-top: 1.5em;
 	margin-bottom: 0.8em;
 	font-weight: 400;
@@ -106,8 +107,8 @@ header {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0.85em;
-	max-width: 1500px;
+	padding: 0.85em 0em;
+	max-width: 1600px;
 	z-index: 10;
 	display: flex;
 	flex-flow: row wrap;
@@ -123,7 +124,7 @@ header a {
 }
 
 img#logo {
-	margin-left: 0.5em;
+	margin-left: 1em;
 	height: 1.6em;
 }
 
@@ -154,7 +155,7 @@ nav a.active {
 	display: none;
 }
 
-@media screen and (max-width:680px) { 
+@media screen and (max-width:800px) { 
 	header {
 		display: flex;
 		flex-flow: row wrap;
@@ -206,7 +207,7 @@ nav a.active {
 /* main, cover and intro areas */
 
 #main {
-	max-width: 1500px;
+	max-width: 1600px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 3em;
