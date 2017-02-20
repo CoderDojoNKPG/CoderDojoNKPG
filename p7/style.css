@@ -81,6 +81,7 @@ body {
 	font-family: Lato, sans-serif;
 	font-size: 18px;
 	margin: 0;
+	line-height: 1.6;
 }
 
 a {
@@ -89,7 +90,7 @@ a {
 
 h1 {
 	font-weight: 300;
-	font-size: 2.3em;
+	font-size: 2.4em;
 	margin-left: 1em;
 	margin-right: 1em;
 	margin-top: 1.5em;
@@ -322,7 +323,7 @@ a.button {
 	display: inline-block;
 	margin: 0.3em;
 	background-color: rgba(255,255,255,0.2);
-	min-width: 4.2em;
+	min-width: 90px;
 	text-align: center;
 }
 
