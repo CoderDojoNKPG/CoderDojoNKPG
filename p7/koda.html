@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Kom igång och börja koda</title>
+</head>
+<body onload="loadIncludes()">
+	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
+		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
+	</header>
+
+	<section id="main">
+		<!--<div style="background-image: url(img/ingela.jpg);" id="cover">	</div>--> <!--optional cover image for page-->
+		<h1>Första dojon</h1>
+		<section class="blocks">
+			<article class="beginner">
+				<div class="img"> </div>
+				<h2>Kom igång</h2>
+				<p>Vad roligt att du vill lära dig att programmera! Här hittar du alla länkar du behöver under första dojon och i nybörjargruppen:</p>
+
+				<div class="tips">
+					<a target="_blank" href="https://studio.code.org/flappy/1">
+						<div class="preview" style="background-image: url(img/nu/flappy.png)"></div>
+						<div class="title">Flappy Bird</div>
+						<div class="description">Lågstadiet eller över</div>
+					</a>
+					<a target="_blank" href="http://code.org/frozen/">
+						<div class="preview" style="background-image: url(img/nu/frozen.png)"></div>
+						<div class="title">Frozen</div>
+						<div class="description">Mellanstadiet eller över</div>
+					</a>
+				</div>
+			</article>
+			<article class="info">
+				<h2>Praktisk info</h2>
+
+				<table>
+					<tr>
+						<td>🙋</td> <td>Fråga först någon vid bordet när du behöver hjälp. Kan ingen hjälpa dig, räck upp handen och så kommer en coach!</td>
+					</tr>
+					<tr>
+						<td>🚫</td> <td>Det råder kodförbud för föräldrar under dojon.</td>
+					</tr>
+					<tr>
+						<td>🚽</td> <td>Toaletten finns bredvid entrédörren.</td>
+					</tr>
+					<tr>
+						<td>🍌</td> <td>Vi har fika cirka 12.00.</td>
+					</tr>
+					<tr>
+						<td>👥</td> <td>Cirka 12.45 börjar redovisningen där du kan visa för alla vad du har gjort under Dojon.</td>
+					</tr>
+					<tr>
+						<td>💻</td> <td>Glöm inte att hålla utkik på Facebook för anmälan till nästa Dojo!</td>
+					</tr>
+				</table>
+			</article>
+		</section>
+
+		<h1>Optional: Another section with heading</h1>
+		<section class="blocks">
+			<article>
+				<h2>
+					Article heading
+				</h2>
+				<p>
+					First paragraph of text
+				</p>
+				<p>
+					Second paragraph of text
+				</p>
+			</article>
+		</section>
+
+		<div cd-include="footer.html"> <!--footer.html is included by script, change in footer.html to change footer-->
+			<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
+		</div>
+	</section>
+</body>
+</html>
