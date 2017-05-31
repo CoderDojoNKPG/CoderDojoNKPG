@@ -375,10 +375,32 @@ article .symbol {
 
 /* For börja koda page */
 
+div.tips a {
+	margin-right: 15px;
+}
+
+div.tips a * {
+	transition: all 0.15s linear;
+}
+
+div.tips a div.preview {
+	background-size: cover;
+	background-position: center;
+	height: 180px;
+	width: 180px;
+	border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+
+	-webkit-mask: url("data:image/svg+xml,%0A%3Csvg width='98px' height='100px' viewBox='130 118 100 101' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M130,119 L230,119 L230,219 C230,219 209.228245,214.936611 180,214.936611 C150.771755,214.936611 130,219 130,219 L130,119 Z' id='Rectangle' stroke='none' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E");
+	-webkit-mask-size: cover;
+	-webkit-mask-position: bottom;
+} 
+
 div.tips {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	margin-left: -15px;
 	margin-right: -15px;
 	margin-top: 1em;
@@ -388,54 +410,25 @@ div.tips {
 	padding-left: 0.5em;
 	max-width: 100%;
 	min-height: 220px;
-}
-
-div.tips a div.preview {
-	background-size: cover;
-	background-position: center;
-	-webkit-mask: url("data:image/svg+xml,%0A%3Csvg width='98px' height='100px' viewBox='130 118 100 101' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M130,119 L230,119 L230,219 C230,219 209.228245,214.936611 180,214.936611 C150.771755,214.936611 130,219 130,219 L130,119 Z' id='Rectangle' stroke='none' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E");
-	-webkit-mask-size: cover;
-	-webkit-mask-position: bottom;
-	height: 100px;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-} 
-
-div.tips a {
-	width: 200px;
 	text-align: center;
-
-	margin: 0.5em;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-decoration: none;
-	background-color: rgba(187,99,45,0.8);
-	color: #eee;
-	border-radius: 8px;
-}
-
-div.tips a:hover {
-	background-color: rgba(187,99,45,0.9);
-}
-
-div.tips a:hover div.preview {
-	height: 75px;
-}
-
-div.tips a:hover div.title, div.tips a:hover div.description {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-div.tips a div {
-	padding: 5px;
-	transition: all 0.2s linear;
 }
 
 div.tips a div.description {
 	font-size: 0.9em;
+	transform: rotateX(90deg);
 }
+
+div.tips a:hover div.description {
+	transform: rotateX(0);
+	color: #23303C;
+}
+
+div.tips a:hover div.preview {
+	opacity: 0.8;
+	transform: scale(1.05);
+}
+
+
 
 article.info table tr td:nth-child(1) {
 	font-size: xx-large;
