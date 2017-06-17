@@ -58,14 +58,17 @@ footer {
 
 .blocks article:nth-of-type(3n+1) {
 	background-color: #C7E2DA; /* extra light */
+	background-color: rgba(199,226,218,0.8);
 }
 
 .blocks article:nth-of-type(3n+2) {
-	background-color: #9ED0C4; /* extra light */
+	background-color: #9ED0C4; /* light */
+	background-color: rgba(158,208,196,0.8);
 }
 
 .blocks article:nth-of-type(3n+3) {
-	background-color: #7BB0A2; /* extra light */
+	background-color: #7BB0A2; /* medium */
+	background-color: rgba(123,176,162,0.8);
 }
 
 
@@ -280,6 +283,10 @@ div#cover {
 	margin-right: auto;
 }
 
+.blocks article>*:not(.img) {
+	max-width: 800px;
+}
+
 .blocks article div.img {
 	background-size: cover;
 	background-position: center;
@@ -332,6 +339,7 @@ a.button {
 	text-align: center;
 	border-radius: 3px;
 	text-shadow: none;
+	transition: all 0.1s linear;
 }
 
 /* special elements */
@@ -386,8 +394,8 @@ div.tips a * {
 div.tips a div.preview {
 	background-size: cover;
 	background-position: center;
-	height: 175px;
-	width: 180px;
+	height: 165px;
+	width: 170px;
 	border-radius: 5px;
 	margin-bottom: 5px;
 
@@ -426,6 +434,7 @@ div.tips a div.description {
 	font-size: 0.9em;
 	transform: rotateX(90deg);
 	margin-bottom: 5px;
+	width: 180px;
 }
 
 div.tips a:hover div.description {
@@ -443,7 +452,14 @@ div.tips a:active div.preview {
 	transform: scale(0.95);
 }
 
-
+header h1 span, .tag { /*beta tag, remove after beta*/
+	background-color: #d77234;
+	color: #F9F9F9;
+	font-size: small;
+	vertical-align: text-top;
+	padding: 0 1px;
+	border-radius: 1px;
+}
 
 
 
