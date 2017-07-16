@@ -272,7 +272,7 @@ div#cover {
 	flex-grow: 1;
 }
 
-.blocks article.bigger {
+.blocks article.bigger, footer article.bigger {
 	min-width: 35%;
 	flex-grow: 2;
 }
@@ -378,6 +378,10 @@ article .symbol {
 	display: block;
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+#map {
+	height: 300px;
 }
 
 

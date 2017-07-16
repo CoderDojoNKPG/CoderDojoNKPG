@@ -26,6 +26,16 @@ function loadInclude(element, url) {
 				var xmlDoc = parser.parseFromString(http_request.responseText, "application/xml");
 				var body = xmlDoc.evaluate("/html/body", xmlDoc, null, XPathResult.ANY_TYPE, null).iterateNext();
 				element.innerHTML = body.innerHTML;
+
+				//execute onloads in include HTML
+				var elementsWithOnloads = xmlDoc.evaluate("/html/body//*[@onload]", xmlDoc, null, XPathResult.ANY_TYPE, null)
+				var elementWithOnload = elementsWithOnloads.iterateNext();
+				while (elementWithOnload) {
+					if (elementWithOnload.attributes["onload"]) {
+						eval(elementWithOnload.attributes["onload"].value)
+					}
+					elementWithOnload = elementsWithOnloads.iterateNext();
+				}
 			}
 		}
 	};
@@ -55,8 +65,20 @@ function includeMap() {
 
     //include leaflet JS
     var script = document.createElement('script');
+    script.onload = loadMap;
     script.src = "https://unpkg.com/leaflet@1.1.0/dist/leaflet.js";
     script.integrity = "sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==";
-    link.crossorigin = "";
-    document.head.appendChild(link);
+    script.crossorigin = "";
+    document.head.appendChild(script);
+}
+
+function loadMap() {
+	if (typeof L == 'undefined') { //leaflet not yet initialized
+		return;
+	}
+
+	var mymap = L.map('map').setView([58.5889, 16.1807], 14);
+	L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYml0c3RlbGxlciIsImEiOiJjajU2c292NWQxNTZmMzNzMzZtYWs0Y3JxIn0.G92r5EM3SjfIYKCogbKpNQ"
+			 ).addTo(mymap);
+	var marker = L.marker([58.5889, 16.1807]).addTo(mymap);
 }
