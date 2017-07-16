@@ -65,7 +65,7 @@ function includeMap() {
 
     //include leaflet JS
     var script = document.createElement('script');
-    script.onload = loadMap;
+    script.addEventListener("load", loadMap);
     script.src = "https://unpkg.com/leaflet@1.1.0/dist/leaflet.js";
     script.integrity = "sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==";
     script.crossorigin = "anonymous";
