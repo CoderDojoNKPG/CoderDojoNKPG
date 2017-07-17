@@ -1,4 +1,3 @@
-var baseURL = "http://coderdojonkpg.se/"
 
 function loadIncludes() {
 	//find all elements with attribute cd-include
@@ -46,18 +45,16 @@ function loadInclude(element, url) {
 }
 
 function updateLinkActive(element) {
-	var links = document.evaluate("//a[@href]", element, null, XPathResult.ANY_TYPE, null)
+	var links = document.evaluate(".//a[@href]", element, null, XPathResult.ANY_TYPE, null)
 	var link = links.iterateNext();
 
 	while (link) {
-		if (window.location.href == (baseURL + link.href)) {
+		if (window.location.href == link.href) {
 			link.classList.add("active");
 		}
 		link = links.iterateNext();
 	}
 }
-
-
 
 
 function includeMap() {
