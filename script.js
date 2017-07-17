@@ -46,7 +46,7 @@ function loadInclude(element, url) {
 }
 
 function updateLinkActive(element) {
-	var links = document.evaluate("a[@href]", element, null, XPathResult.ANY_TYPE, null)
+	var links = document.evaluate("//a[@href]", element, null, XPathResult.ANY_TYPE, null)
 	var link = links.iterateNext();
 
 	while (link) {
