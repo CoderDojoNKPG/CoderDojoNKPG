@@ -1,3 +1,5 @@
+var baseURL = "http://coderdojonkpg.se/"
+
 function loadIncludes() {
 	//find all elements with attribute cd-include
 	var includeElements = document.evaluate("//*[@cd-include]", document, null, XPathResult.ANY_TYPE, null)
@@ -26,6 +28,7 @@ function loadInclude(element, url) {
 				var xmlDoc = parser.parseFromString(http_request.responseText, "application/xml");
 				var body = xmlDoc.evaluate("/html/body", xmlDoc, null, XPathResult.ANY_TYPE, null).iterateNext();
 				element.innerHTML = body.innerHTML;
+				updateLinkActive(element);
 
 				//execute onloads in include HTML
 				var elementsWithOnloads = xmlDoc.evaluate("/html/body//*[@onload]", xmlDoc, null, XPathResult.ANY_TYPE, null)
@@ -42,17 +45,20 @@ function loadInclude(element, url) {
 	http_request.send(null);
 }
 
-function updateMenuVisible() {
-	var nav = document.getElementById("mainMenu");
-	var toggleMenu = document.getElementById("toggleMenu");
+function updateLinkActive(element) {
+	var links = document.evaluate("a[@href]", element, null, XPathResult.ANY_TYPE, null)
+	var link = links.iterateNext();
 
-	if (toggleMenu.checked) {
-		nav.classList.add("visible")
-	}
-	else {
-		nav.classList.remove("visible")
+	while (link) {
+		if (window.location.href === (baseURL + link.attributes["href"])) {
+			link.classList.add("active");
+		}
+		link = links.iterateNext();
 	}
 }
+
+
+
 
 function includeMap() {
 	//include leaflet css
@@ -81,4 +87,16 @@ function loadMap() {
 	L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYml0c3RlbGxlciIsImEiOiJjajU2c292NWQxNTZmMzNzMzZtYWs0Y3JxIn0.G92r5EM3SjfIYKCogbKpNQ"
 			 ).addTo(mymap);
 	var marker = L.marker([58.5889, 16.1807]).addTo(mymap);
+}
+
+function updateMenuVisible() {
+	var nav = document.getElementById("mainMenu");
+	var toggleMenu = document.getElementById("toggleMenu");
+
+	if (toggleMenu.checked) {
+		nav.classList.add("visible")
+	}
+	else {
+		nav.classList.remove("visible")
+	}
 }
