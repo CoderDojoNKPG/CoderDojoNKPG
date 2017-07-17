@@ -50,7 +50,7 @@ function updateLinkActive(element) {
 	var link = links.iterateNext();
 
 	while (link) {
-		if (window.location.href === (baseURL + link.attributes["href"])) {
+		if (window.location.href === (baseURL + link.href)) {
 			link.classList.add("active");
 		}
 		link = links.iterateNext();
