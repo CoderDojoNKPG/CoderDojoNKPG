@@ -420,8 +420,8 @@ div.tips a {
 	background-size: cover;
 	background-position: center;
 	border-radius: 4px;
-	height: 170px;
-	width: 170px;
+	height: 160px;
+	width: 160px;
 
 	display: flex;
 	flex-flow: column wrap;
@@ -430,7 +430,7 @@ div.tips a {
 
 div.tips a div.title {
 	font-size: 1.1em;
-	width: 182;
+	width: 172px;
 	margin-left: -6px;
 	display: inline-block;
 	position: relative;
@@ -464,7 +464,7 @@ div.tips a div.title::after {
 
 div.tips a div.description {
 	font-size: 0.8em;
-	width: 170px;
+	width: 160px;
 	padding: 4px;
 	box-sizing: border-box;
 	border-radius: 0px 0px 4px 4px;
@@ -476,6 +476,8 @@ div.tips a {
 
 div.tips a:hover {
 	transform: scale(1.05);
+	height: 170px;
+	margin-bottom: 20px;
 }
 
 div.tips a:active {
