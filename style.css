@@ -25,9 +25,16 @@ Backgrounds:
 
 /* Colors */
 
-body {
+body, footer {
+	background-color: #E6EEEC; /* Footer */
+}
+
+div.tips a div.description {
+	background-color: rgba(230,238,236,0.95); /*footer*/
+}
+
+body, footer, nav a, div.tips a div.description {
 	color: #23303C; /* Normal text */
-	background-color: #E6EEEC;
 }
 
 header {
@@ -41,24 +48,30 @@ section#main {
 
 a, nav a.active, nav a:hover {
 	color: #C3773A; /* Links/buttons */
+	border-color: #C3773A; /* Links/buttons */
 }
 
-nav a {
-	color: #23303C;
+a.button, .tag {
+	background-color: rgba(249,249,249,0.3); /* Body #F9F9F9 */
 }
 
-a.button:hover {
-	background-color: #C3773A;
-	color: #F9F9F9;
+a.button:hover, div.tips a div.title {
+	background-color: #C3773A; /* Links/buttons */
+	color: #F9F9F9; /* Body */
 }
 
-footer {
-	background-color: #E6EEEC;
+div.tips a div.title::before, div.tips a div.title::after {
+	border-color: rgba(166,102,50,1.0); /* Links/buttons, but darker */
 }
 
-.blocks article:nth-of-type(3n+1) {
+.comment::after {
+	border-color: #C7E2DA; /* extra light */
+	border-color: rgba(199,226,218,0.8);/* extra light */
+}
+
+.blocks article:nth-of-type(3n+1), .comment {
 	background-color: #C7E2DA; /* extra light */
-	background-color: rgba(199,226,218,0.8);
+	background-color: rgba(199,226,218,0.8);/* extra light */
 }
 
 .blocks article:nth-of-type(3n+2) {
@@ -334,7 +347,6 @@ a.button {
 	border-style: solid;
 	display: inline-block;
 	margin: 0.3em;
-	background-color: rgba(255,255,255,0.2);
 	min-width: 90px;
 	text-align: center;
 	border-radius: 3px;
@@ -345,9 +357,7 @@ a.button {
 /* special elements */
 
 .comment {
-	background-color: #C7E2DA;
 	padding: 0.5em 1em 0.5em 1em;
-	color: #2F3E4E;
 	position: relative;
 	border-radius: 8px;
 }
@@ -361,7 +371,8 @@ a.button {
  	height: 0; 
  	border-left: 1em solid transparent;
  	border-right: 1em solid transparent;
-	border-top: 1em solid #C7E2DA;
+	border-top-style: solid;
+	border-top-width: 1em;
 }
 
 .include-failed {
@@ -419,8 +430,6 @@ div.tips a {
 
 div.tips a div.title {
 	font-size: 1.1em;
-	background-color: #C3773A;
-	color: #E6EEEC;
 	width: 182;
 	margin-left: -6px;
 	display: inline-block;
@@ -431,7 +440,8 @@ div.tips a div.title::before {
 	content: '';
 	width: 0px;
 	height: 0px;
-	border-bottom: 6px solid rgba(166,102,50,1.0);
+	border-bottom-style: solid;
+	border-bottom-width: 6px;
 	border-left: 6px solid transparent;
 	position: absolute;
 	top:-6;
@@ -444,7 +454,8 @@ div.tips a div.title::after {
 	width: 0px;
 	height: 0px;
 	border-top: 6px solid transparent;
-	border-left: 6px solid rgba(166,102,50,1.0);
+	border-left-style: solid;
+	border-left-width: 6px;
 	position: absolute;
 	top:-6;
 	right: 0;
@@ -454,8 +465,6 @@ div.tips a div.title::after {
 div.tips a div.description {
 	font-size: 0.8em;
 	width: 170px;
-	background-color: rgba(230,238,236,0.95); /*footer*/
-	color: #23303C;
 	padding: 4px;
 	box-sizing: border-box;
 	border-radius: 0px 0px 4px 4px;
@@ -473,17 +482,12 @@ div.tips a:active {
 	transform: scale(0.95);
 }
 
-
-header h1 span, .tag { /*beta tag, remove after beta*/
-	background-color: #d77234;
-	color: #F9F9F9;
+.tag {
 	font-size: small;
 	vertical-align: text-top;
 	padding: 0 1px;
 	border-radius: 1px;
 }
-
-
 
 article.info table tr td:nth-child(1) {
 	font-size: xx-large;
