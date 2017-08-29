@@ -148,7 +148,7 @@ header {
 	transform-style: preserve-3d;
 }
 
-header a {
+header a, nav a {
 	font-size: 1.3em;
 }
 
@@ -476,8 +476,8 @@ div.tips a {
 
 div.tips a:hover {
 	transform: scale(1.05);
-	height: 170px;
-	margin-bottom: 20px;
+	height: 165px;
+	margin-bottom: 25px;
 }
 
 div.tips a:active {
