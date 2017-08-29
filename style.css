@@ -317,10 +317,10 @@ div#cover {
 
 @media screen and (max-width:800px) { 
 	.blocks article, footer article {
-		padding: 1em 1em;
+		padding: 1em 2em;
 	}
 	.blocks article div.img {
-		margin: -1em -1em 0em -1em;
+		margin: -1em -2em 0em -2em;
 	}
 }
 
