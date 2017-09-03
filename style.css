@@ -479,14 +479,17 @@ div.tips a div.description {
 	border-radius: 0px 0px 4px 4px;
 }
 
-div.tips a {
+div.tips a, div.tips a div.description{
 	transition: all 0.15s linear;
 }
 
 div.tips a:hover {
 	transform: scale(1.05);
-	height: 165px;
-	margin-bottom: 25px;
+}
+
+div.tips a:hover div.description {
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
 }
 
 div.tips a:active {
