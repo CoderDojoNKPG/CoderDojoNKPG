@@ -269,6 +269,17 @@ div#cover {
 	transform-style: preserve-3d;
 }
 
+#next-dojo {
+	min-height: 5em;
+	opacity: 1;
+	transition: 0.4s all ease-in;
+}
+
+#next-dojo.invalid {
+	opacity: 0;
+	transition: none;
+}
+
 /* blocks */
 
 .blocks {
