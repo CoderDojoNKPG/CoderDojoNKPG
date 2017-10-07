@@ -140,6 +140,10 @@ function loadEventInfo() {
 				var eventData = JSON.parse(http_request.responseText)
 				updateEventInfo(eventData);
 			}
+			else {
+				nextDojoInfo.innerHTML = 'Kommande dojos hittar du på <a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>';
+				nextDojoP.classList.remove("invalid"); 
+			}
 		}
 	};
 	http_request.send(null);
@@ -162,7 +166,7 @@ function updateEventInfo(eventData) {
 	var nextDojoP = document.getElementById("next-dojo")
 
 	if (events.length == 0) {
-		nextDojoInfo.innerHTML = "Nästa dojo anonseras inom kort";
+		nextDojoInfo.innerHTML = "Nästa dojo annonseras inom kort";
 		nextDojoP.classList.remove("invalid"); 
 	}
 	else {
@@ -194,6 +198,10 @@ function updateRegistrationInfo(nextDojoEvent) {
 				//event is not on sale yet
 				nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Mer info</a>';
 				nextDojoInfo.innerHTML += "<br/> <small>Anmälan släpps på kvällen onsdagen innan dojon</small>";
+				nextDojoP.classList.remove("invalid"); 
+			}
+			else {
+				nextDojoInfo.innerHTML += " " + '<a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>';
 				nextDojoP.classList.remove("invalid"); 
 			}
 		}
