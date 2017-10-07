@@ -128,8 +128,8 @@ Load event info from Eventbrite
 
 function loadEventInfo() {
 	var http_request = new XMLHttpRequest();
-	//user.id is the user id of CoderDojo Norrköpings profile, token is for another fake profile in order to not expose private data from CoderDojos account
-	http_request.open("GET", "https://www.eventbriteapi.com/v3/events/search/?token=EO5BKRJY6BKX2UQ5TUUW&user.id=28393866437", true);
+	//organizer.id=6121564077 is the user id of CoderDojo Norrköpings profile, token is for another fake profile in order to not expose private data from CoderDojos account
+	http_request.open("GET", "https://www.eventbriteapi.com/v3/events/search/?token=EO5BKRJY6BKX2UQ5TUUW&organizer.id=6121564077&include_unavailable_events=on", true);
 	http_request.onreadystatechange = function () {
 		var done = 4, ok = 200, local = 0;
 		if (http_request.readyState == done) {
@@ -163,8 +163,34 @@ function updateEventInfo(eventData) {
 	else {
 		var nextDojoEvent = events[0];
 		nextDojoInfo.innerHTML = "Nästa dojo: " + events[0].name.text;
-		nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Anmälan</a>';
+		updateRegistrationInfo(nextDojoEvent);
 	}
+}
+
+function updateRegistrationInfo(nextDojoEvent) {
+	var http_request = new XMLHttpRequest();
+	//organizer.id=6121564077 is the user id of CoderDojo Norrköpings profile, token is for another fake profile in order to not expose private data from CoderDojos account
+	http_request.open("GET", "https://www.eventbriteapi.com/v3/events/search/?token=EO5BKRJY6BKX2UQ5TUUW&organizer.id=6121564077", true);
+	http_request.onreadystatechange = function () {
+		var done = 4, ok = 200, local = 0;
+		if (http_request.readyState == done) {
+			if (http_request.status == ok || http_request.status == local) {
+				var eventData = JSON.parse(http_request.responseText)
+				var events = eventData.events;
+				var nextDojoInfo = document.getElementById("next-dojo-info");
+				for (var i = 0; i < events.length; i++) {
+					if (events[i].id == nextDojoEvent.id) {
+						nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Anmälan</a>';
+						return;
+					}
+				}
+				//event is not on sale yet
+				nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Mer info</a>';
+				nextDojoInfo.innerHTML += "<br/> <small>Anmälan släpps på kvällen onsdagen innan dojon</small>"
+			}
+		}
+	};
+	http_request.send(null);
 }
 
 
