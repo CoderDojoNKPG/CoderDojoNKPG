@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="script.js"></script>
 	<title>CoderDojo Norrköping</title>
 </head>
-<body onload="loadIncludes()">
+<body onload="loadIncludes();loadEventInfo();">
 	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
 		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
 	</header>
@@ -21,33 +21,28 @@
 				Då är du välkommen till CoderDojo Norrköping varannan lördag.
 			</p>
 			<p>
-				<img src="img/icon/clock.png" class="symbol"/>&nbsp; Nästa dojo anonseras i augusti&nbsp; 
-				<!--<a href="#" class="button">Anmälan</a>-->
+				<img src="img/icon/clock.png" class="symbol"/>&nbsp;
+				<span id="next-dojo-info" onload="loadEventInfo();"> <!--Don't change, data fetched via Javascript from eventbrite automatically-->
+					Kommande dojos hittar du på <a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>
+				</span>
 			</p>
 		</section>
 
 		<section class="blocks">
-			<!--
 			<article>
 				<div class="img"> </div>
 				<h2>
 					Höstens dojos
 				</h2>
-
+				Här är datumen för de kommande dojos:
 				<ul>
-					<li>4 februari</li>
-					<li>18 februari</li>
-					<li>4 mars</li>
-					<li>18 mars</li>
-					<li>1 april</li>
-          		</ul>
-			</article>-->
-			<article>
-				<div class="img" style="background-image: url(img/utebarn.jpg);"> </div>
-				<h2>SummerCamp</h2>
-				<p>
-					Mellan 3-7 juli pågår CoderDojo SummerCamp i Norrköping. Lägret är ett sammarbete med Norrköpings Fritidsgårdar och kommer vara gratis för deltagare mellan 10-16 år. <a href="summercamp.html">Mer&nbsp;information</a>
-				</p>
+					<li>14 oktober</li>
+					<li>28 oktober</li>
+					<li>11 november</li>
+					<li>25 november</li>
+					<li>9 december</li>
+				</ul>
+				Alla dojos är mellan kl 11-13 på Demola (Laxholmstorget 3).
 			</article>
 			<article>
 				<div class="img" style="background-image: url(img/forvanad.jpg);"> </div>
@@ -111,7 +106,7 @@
 		<section class="single">
 			<article>
 				<!-- LightWidget WIDGET -->
-				<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2c755f55aef05ff4b276be1a61ffca8e.html" id="lightwidget_2c755f55ae" name="lightwidget_2c755f55ae"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+				<script src="http://lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/2c755f55aef05ff4b276be1a61ffca8e.html" id="lightwidget_2c755f55ae" name="lightwidget_2c755f55ae"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 			</article>
 		</section>
 
