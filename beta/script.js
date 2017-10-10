@@ -126,6 +126,75 @@ function updateMenuVisible() {
 Load event info from Eventbrite
 ================*/
 
+var timeUnits = {
+	second: 1,
+	minute: 60,
+	hour: 3600,
+	day: 86400,
+	week: 604800,
+	month: 2592000,
+	year: 31536000
+};
+
+function getNumberOfDaysBetween(date1, date2) {
+  var oneDay = 24*60*60*1000;
+  return Math.round((date2.getTime() - date1.getTime())/(timeUnits.day)); 
+}
+
+function formatDate(date) {
+	var dateStr = date.getFullYear() + "-";
+		if (date.getMonth()+1 < 10) 
+			dateStr += "0";
+		dateStr += (date.getMonth()+1) + "-";
+		if (date.getDate() < 10)
+			dateStr += "0";
+		dateStr += date.getDate();
+	return dateStr;
+}
+
+function getHumanReadableDate(date) {
+	var dateStr, amount,
+		current = new Date().getTime(),
+		diff = (current - date.getTime()) / 1000;
+
+	if(diff > timeUnits.week) {
+		dateStr = formatDate(date);
+	}
+	else if(diff > timeUnits.day) {
+		amount = Math.round(diff/timeUnits.day);
+		dateStr = ((amount > 1) ? amount + " " + "dagar sedan":"igår");
+	} 
+	else if(diff > timeUnits.hour) {
+		amount = Math.round(diff/timeUnits.hour);
+		dateStr = ((amount > 1) ? amount + " " + "timmar":"en timme") + " sedan";
+	} 
+	else if(diff > timeUnits.minute) {
+		amount = Math.round(diff/timeUnits.minute);
+		dateStr = ((amount > 1) ? amount + " " + "minuter":"en minut") + " sedan";
+	} 
+	else if(diff > -timeUnits.minute){
+		dateStr = "nu";
+	}
+	else if(diff > -timeUnits.hour) {
+		amount = -Math.round(diff/timeUnits.minute);
+		dateStr = "om " + ((amount > 1) ? amount + " " + "minuter":"en minut");
+	} 
+	else if(diff > -timeUnits.day) {
+		amount = -Math.round(diff/timeUnits.hour);
+		dateStr = "om " + ((amount > 1) ? amount + " " + "timmar" + "s":"en timme");
+	} 
+	else if(diff > -timeUnits.week) {
+		amount = -Math.round(diff/timeUnits.day);
+		dateStr = ((amount > 1) ? "om " + amount + " " + "dagar":"imorgon");
+	}
+	else {
+		dateStr = formatDate(date);
+	}
+
+	return dateStr;
+};
+
+
 function loadEventInfo() {
 	var nextDojoP = document.getElementById("next-dojo")
 	nextDojoP.classList.add("invalid"); //hide while loading
@@ -167,46 +236,45 @@ function updateEventInfo(eventData) {
 
 	if (events.length == 0) {
 		nextDojoInfo.innerHTML = "Nästa dojo annonseras inom kort";
-		nextDojoP.classList.remove("invalid"); 
 	}
 	else {
-		var nextDojoEvent = events[0];
-		nextDojoInfo.innerHTML = "Nästa dojo: " + events[0].name.text;
-		updateRegistrationInfo(nextDojoEvent);
-	}
-}
-
-function updateRegistrationInfo(nextDojoEvent) {
-	var nextDojoP = document.getElementById("next-dojo")
-	var http_request = new XMLHttpRequest();
-	//organizer.id=6121564077 is the user id of CoderDojo Norrköpings profile, token is for another fake profile in order to not expose private data from CoderDojos account
-	http_request.open("GET", "https://www.eventbriteapi.com/v3/events/search/?token=EO5BKRJY6BKX2UQ5TUUW&organizer.id=6121564077", true);
-	http_request.onreadystatechange = function () {
-		var done = 4, ok = 200, local = 0;
-		if (http_request.readyState == done) {
-			if (http_request.status == ok || http_request.status == local) {
-				var eventData = JSON.parse(http_request.responseText)
-				var events = eventData.events;
-				var nextDojoInfo = document.getElementById("next-dojo-info");
-				for (var i = 0; i < events.length; i++) {
-					if (events[i].id == nextDojoEvent.id) {
-						nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Anmälan</a>';
-						nextDojoP.classList.remove("invalid"); 
-						return;
-					}
-				}
-				//event is not on sale yet
-				nextDojoInfo.innerHTML += " " + '<a href="' + nextDojoEvent.url + '" class="button">Mer info</a>';
-				nextDojoInfo.innerHTML += "<br/> <small>Anmälan släpps på kvällen onsdagen innan dojon</small>";
-				nextDojoP.classList.remove("invalid"); 
-			}
-			else {
-				nextDojoInfo.innerHTML += " " + '<a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>';
-				nextDojoP.classList.remove("invalid"); 
-			}
+		nextDojoInfo.innerHTML = ""
+		for (var i = 0; i < events.length; i++) {
+			nextDojoInfo.innerHTML += getEventInfoHTML(events[i]) + "<br/>";
 		}
-	};
-	http_request.send(null);
+	}
+	nextDojoP.classList.remove("invalid"); 
 }
 
+function getEventInfoHTML(event) {
+	var strHTML = "";
+	if (event.name.text.startsWith("CoderDojo Norrköping")) {
+		//Normal dojo
+		strHTML = event.name.text;
+		var registrationDate = new Date((Date.parse(event.start.utc)) - 1000*55 * timeUnits.hour); //registration starts wednesday 18:00 before dojo (55 hours before start)
+		if (new Date() < registrationDate) {
+			//event is not on sale yet
+			strHTML += " " + '<a href="' + event.url + '" class="button">Mer info</a>';
+			strHTML  += "<br/> <small>Anmälan släpps " + getHumanReadableDate(registrationDate) + "</small>";
+		}
+		else {
+			strHTML += " " + '<a href="' + event.url + '" class="button">Anmälan</a>';
+		}
+	}
+	else {
+		//other event
+		strHTML = formatDate(new Date(Date.parse(event.start.utc))) + ": " + event.name.text;
+		var registrationDate = new Date((Date.parse(event.start.utc)) - 7 * timeUnits.day); //registration starts one week before
+		if (new Date() < registrationDate) {
+			//event is not on sale yet
+			strHTML += " " + '<a href="' + event.url + '" class="button">Mer info</a>';
+		}
+		else {
+			strHTML += " " + '<a href="' + event.url + '" class="button">Anmälan</a>';
+		}
+	}
+
+
+	return strHTML;
+}
 
