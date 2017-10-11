@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="script.js"></script>
 	<title>CoderDojo Norrköping</title>
 </head>
-<body onload="loadIncludes()">
+<body onload="loadIncludes();loadEventInfo();">
 	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
 		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
 	</header>
@@ -20,10 +20,11 @@
 				Är du tjej eller kille mellan sju och 17 år och vill testa på att koda?<br/>
 				Då är du välkommen till CoderDojo Norrköping varannan lördag.
 			</p>
-			<p>
-				<img src="img/icon/clock.png" class="symbol"/>&nbsp; Nästa dojo: Lördag, 14 oktober kl 11-13&nbsp; <br/>
-				<small>Anmälan släpps kl 18.00 på onsdagen innan dojon</small>
-				<!--<a href="https://www.eventbrite.com/e/coderdojo-norrkoping-309-registrering-37969702402" class="button">Anmälan</a>-->
+			<p id="next-dojo">
+				<img src="img/icon/clock.png" class="symbol"/>&nbsp;
+				<span id="next-dojo-info" onload="loadEventInfo();"> <!--Don't change, data fetched via Javascript from eventbrite automatically-->
+					Kommande dojos hittar du på <a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>
+				</span>
 			</p>
 		</section>
 
@@ -43,17 +44,6 @@
 				</ul>
 				Alla dojos är mellan kl 11-13 på Demola (Laxholmstorget 3).
 			</article>
-			<article class="bigger">
-				<div class="img" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c0/Ada_Lovelace_Chalon_portrait.jpg)"> </div>
-				<h2>Ha en bra Ada-dag!</h2>
-				<p>
-					Idag den 10 oktober firar vi på CoderDojo Norrklöping <em>Ada Lovelace - dagen</em> för att ära programmeringens moder. Ada föddes 1815 och skrev den första algoritmen avsedd för att bearbetas av en maskin. Wow!
-				</p>
-				<p>
-Under lördagens dojo kommer vi köra en diskussionsgrupp för föräldrarna under andra halvan, med tema <b>inkludering</b>. Kan man inte komma eller vill läsa en intressant artikel om detta rekommenderar vi <em>Cracking the Gender Code</em>: <a href="https://girlswhocode.com/crack-the-code/">girlswhocode.com</a>
-				</p>
-			</article>
-			<!--
 			<article>
 				<div class="img" style="background-image: url(img/forvanad.jpg);"> </div>
 				<h2>Alla kan koda!</h2>
@@ -63,7 +53,6 @@ Under lördagens dojo kommer vi köra en diskussionsgrupp för föräldrarna und
 					Att lära sig att programmera är roligare och enklare än vad många tror. Vi tror att alla kan koda!
 				</p>
 			</article>
-			-->
 			<article>
 				<div class="img" style="background-image: url(img/klassrum.jpg);"> </div>
 				<h2>Om CoderDojo</h2>
