@@ -181,7 +181,7 @@ function getHumanReadableDate(date) {
 	} 
 	else if(diff > -timeUnits.day) {
 		amount = -Math.round(diff/timeUnits.hour);
-		dateStr = "om " + ((amount > 1) ? amount + " " + "timmar" + "s":"en timme");
+		dateStr = "om " + ((amount > 1) ? amount + " " + "timmar":"en timme");
 	} 
 	else if(diff > -timeUnits.week) {
 		amount = -Math.round(diff/timeUnits.day);
@@ -251,7 +251,8 @@ function getEventInfoHTML(event) {
 	if (event.name.text.startsWith("CoderDojo Norrköping")) {
 		//Normal dojo
 		strHTML = event.name.text;
-		var registrationDate = new Date((Date.parse(event.start.utc)) - 1000*55 * timeUnits.hour); //registration starts wednesday 18:00 before dojo (55 hours before start)
+		var eventDate = new Date((Date.parse(event.start.utc)));
+		var registrationDate = new Date(eventDate.getTime() - 1000*65 * timeUnits.hour); //registration starts wednesday 18:00 before dojo (55 hours before start)
 		if (new Date() < registrationDate) {
 			//event is not on sale yet
 			strHTML += " " + '<a href="' + event.url + '" class="button">Mer info</a>';
@@ -263,8 +264,8 @@ function getEventInfoHTML(event) {
 	}
 	else {
 		//other event
-		strHTML = formatDate(new Date(Date.parse(event.start.utc))) + ": " + event.name.text;
-		var registrationDate = new Date((Date.parse(event.start.utc)) - 7 * timeUnits.day); //registration starts one week before
+		strHTML = formatDate(eventDate) + ": " + event.name.text;
+		var registrationDate = new Date(eventDate.getTime() - 7 * timeUnits.day); //registration starts one week before
 		if (new Date() < registrationDate) {
 			//event is not on sale yet
 			strHTML += " " + '<a href="' + event.url + '" class="button">Mer info</a>';
