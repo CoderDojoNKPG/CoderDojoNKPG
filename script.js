@@ -224,7 +224,7 @@ function compareEvents(event1, event2) {
 		return -1;
 	}
 	if (Date.parse(event1.start.utc) > Date.parse(event2.start.utc)) {
-		return -1;
+		return 1;
 	}
 	return 0;
 }
@@ -248,10 +248,11 @@ function updateEventInfo(eventData) {
 
 function getEventInfoHTML(event) {
 	var strHTML = "";
+	var eventDate = new Date((Date.parse(event.start.utc)));
+
 	if (event.name.text.startsWith("CoderDojo Norrköping")) {
 		//Normal dojo
 		strHTML = event.name.text;
-		var eventDate = new Date((Date.parse(event.start.utc)));
 		var registrationDate = new Date(eventDate.getTime() - 1000*65 * timeUnits.hour); //registration starts wednesday 18:00 before dojo (55 hours before start)
 		if (new Date() < registrationDate) {
 			//event is not on sale yet
