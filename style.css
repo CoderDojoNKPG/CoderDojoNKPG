@@ -249,10 +249,6 @@ nav a.active {
 		transition: all 0.2s ease-out;
 		padding-top: 1em;
 	}
-
-	img#logo {
-		height: 2em;
-	}
 }
 
 /* main, cover and intro areas */
