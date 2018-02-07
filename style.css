@@ -156,6 +156,7 @@ header a, nav a {
 img#logo {
 	margin-left: 1em;
 	height: 1.6em;
+	padding-bottom: 0.4em;
 }
 
 nav {
@@ -190,26 +191,43 @@ nav a.active {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		align-items: center;
 	}
-	 
+	
+	@keyframes turnfade {
+		0%   { transform: scaleY(1); }
+		50%   { transform: scaleY(0.1); }
+		75% { transform: scaleY(0.9);  }
+		100% { transform: scaleY(1);  }
+	  }
+
+	  @keyframes turnfade2 {
+		0%   { transform: scaleY(1); }
+		50%   { transform: scaleY(0); }
+		75% { transform: scaleY(0.9);  }
+		100% { transform: scaleY(1);  }
+	  }
+	
 	#toggleMenu + label {
 		display: block;
+		transition: background-image 0.3s steps(2,1);
 		background-image: url(img/icon/menu.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		height: 2em;
 		width: 2em;
-		margin-right: 2.5em;
+		margin-right: 1.6em;
+		animation: turnfade 0.3s;
 	}
 	
 	#toggleMenu:checked + label {
 		background-image: url(img/icon/close.png);
 		background-repeat: no-repeat;
 		background-size: contain;
+		animation: turnfade2 0.3s;
 	}
 
 	#mainMenu {
-		margin-top: 1em;
 		max-height: 0;
 		transform:scale(1,0);
 		opacity: 0;
@@ -229,9 +247,12 @@ nav a.active {
 		max-height: 20em;
 		transform:scale(1);
 		transition: all 0.2s ease-out;
-
+		padding-top: 1em;
 	}
 
+	img#logo {
+		height: 2em;
+	}
 }
 
 /* main, cover and intro areas */
@@ -293,13 +314,13 @@ div#cover {
 	margin-top: 0.2em;
 	padding: 1em 3em;
 	flex: 1 1 auto;
-	width: 300px;
+	width: 380px;
 	flex-grow: 1;
 }
 
 .blocks article.bigger, footer article.bigger {
-	min-width: 35%;
-	flex-grow: 2;
+	min-width: 32%;
+	flex-grow: 3;
 }
 
 .blocks article>*:not(.img) {
@@ -327,7 +348,7 @@ div#cover {
 	-webkit-mask-position: bottom;
 }
 
-@media screen and (max-width:800px) { 
+@media screen and (max-width:1024px) { 
 	.blocks article, footer article {
 		padding: 1em 1.5em;
 	}
@@ -436,8 +457,8 @@ div.tips {
 }
 
 div.tips a {
-	margin-right: 30px;
-	margin-bottom: 30px;
+	margin-right: 26px;
+	margin-bottom: 26px;
 	background-size: cover;
 	background-position: center;
 	border-radius: 4px;
