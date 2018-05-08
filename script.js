@@ -235,7 +235,8 @@ function updateEventInfo(eventData) {
 	var nextDojoP = document.getElementById("next-dojo")
 
 	if (events.length == 0) {
-		nextDojoInfo.innerHTML = "Nästa dojo annonseras inom kort";
+		nextDojoInfo.innerHTML = "Nästa dojo annonseras inom kort </br>";
+		nextDojoInfo.innerHTML += '<a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>';
 	}
 	else {
 		nextDojoInfo.innerHTML = ""
@@ -253,7 +254,7 @@ function getEventInfoHTML(event) {
 	if (event.name.text.startsWith("CoderDojo Norrköping")) {
 		//Normal dojo
 		strHTML = event.name.text;
-		var registrationDate = new Date(eventDate.getTime() - 1000*65 * timeUnits.hour); //registration starts wednesday 18:00 before dojo (55 hours before start)
+		var registrationDate = new Date(eventDate.getTime() - 1000*(4*24+17) * timeUnits.hour); //registration starts wednesday 18:00 before dojo (65 hours before start)
 		if (new Date() < registrationDate) {
 			//event is not on sale yet
 			strHTML += " " + '<a href="' + event.url + '" class="button">Mer info</a>';
