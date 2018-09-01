@@ -18,6 +18,9 @@ function loadIncludes() {
 
 	//include leaflet library for map
 	includeMap()
+
+	//start screens
+	updateScreens();
 }
 
 
@@ -119,6 +122,78 @@ function updateMenuVisible() {
 		nav.classList.remove("visible")
 	}
 }
+
+
+
+/*
+================
+Screens timing
+================
+*/
+
+function updateScreens() {
+	var allscreens = document.getElementsByClassName("screen");
+
+	if (allscreens.length==0) {
+		return;
+	}
+
+	var screens = [];
+	var phaseTimes = [];
+	for (var i = allscreens.length - 1; i >= 0; i--) {
+		if (allscreens[i].attributes.hasOwnProperty("from") && allscreens[i].attributes.hasOwnProperty("to")) {
+			phaseTimes.push(parseInt(allscreens[i].attributes.from.value));
+			phaseTimes.push(parseInt(allscreens[i].attributes.to.value));
+			screens.push(allscreens[i])
+		}
+	}
+	phaseTimes = Array.from(new Set(phaseTimes));
+	phaseTimes.sort(function(a, b){return a - b});
+
+	var phaseScreens = [];
+	for (var i = 0; i < phaseTimes.length - 1; i++) {
+		phaseScreens.push([]);
+		for (var j = screens.length - 1; j >= 0; j--) {
+			if (screens[j].attributes.hasOwnProperty("from") && screens[j].attributes.hasOwnProperty("to")) {
+				var from = parseInt(screens[j].attributes.from.value);
+				var to = parseInt(screens[j].attributes.to.value);
+
+				if (from <= phaseTimes[i] && to >= phaseTimes[i+1]) {
+					phaseScreens[i].push(screens[j]);
+				}
+			}
+		}
+	}
+
+	var startDate = new Date(2018,8,1,21,15);
+	var currentMinute = (new Date() - startDate)/1000/60;
+	var currentPhase = -1;
+
+	for (var i = 0; i < phaseTimes.length-1; i++) {
+		if (currentMinute >= phaseTimes[i] && currentMinute <= phaseTimes[i+1]) {
+			currentPhase = i;
+			break;
+		}
+	}
+
+	var currentScreen = -1;
+	for (var j = 0; j < phaseScreens[currentPhase].length; j++) {
+		if (phaseScreens[currentPhase][j].style.display == "block") {
+			currentScreen = j;
+			break;
+		}
+	}
+	currentScreen = (currentScreen + 1) % phaseScreens[currentPhase].length;
+
+	screens.map(function(screen) {screen.style.display = "none";})
+	phaseScreens[currentPhase][currentScreen].style.display = "block";
+
+
+	if (document.getElementsByClassName("screen").length > 0) {
+		setTimeout(updateScreens, 10000);
+	}
+}
+
 
 
 /* 

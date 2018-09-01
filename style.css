@@ -43,7 +43,7 @@ header {
 	border-bottom-color: #C3773A;
 }
 
-section#main {
+section#main, section.screen {
 	background-color: #F9F9F9; /* Body */
 }
 
@@ -253,7 +253,7 @@ nav a.active {
 
 /* main, cover and intro areas */
 
-#main {
+#main, .screen {
 	max-width: 1600px;
 	margin-left: auto;
 	margin-right: auto;
@@ -539,6 +539,16 @@ article.info table tr td:nth-child(1) {
 	padding-right: 1em;
 }
 
+
+/* For screens */
+
+.screen {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	font-size:1.5em;
+	display: none;
+}
 
 /* social icons */
 
