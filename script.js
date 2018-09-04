@@ -310,7 +310,7 @@ function updateEventInfo(eventData) {
 	var nextDojoP = document.getElementById("next-dojo")
 
 	if (events.length == 0) {
-		nextDojoInfo.innerHTML = "Nästa dojo annonseras inom kort </br>";
+		nextDojoInfo.innerHTML = "Nästa dojo och anmälan hittar du på </br>";
 		nextDojoInfo.innerHTML += '<a href="https://www.eventbrite.com/o/coderdojo-norrkoping-6121564077" class="button">Eventbrite</a>';
 	}
 	else {
