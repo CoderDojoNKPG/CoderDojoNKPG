@@ -165,7 +165,7 @@ function updateScreens() {
 		}
 	}
 
-	var startDate = new Date(2018,8,1,21,15);
+	var startDate = new Date(2018,8,8,11,0);
 	var currentMinute = (new Date() - startDate)/1000/60;
 	var currentPhase = -1;
 
