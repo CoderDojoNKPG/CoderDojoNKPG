@@ -1,21 +1,21 @@
 <template>
   <div>
-    <nav/>
+    <layout-nav/>
 
     <nuxt/>
 
-    <footer/>
+    <layout-footer/>
   </div>
 </template>
 
 <script>
-import Nav from '~/components/nav.vue'
-import Footer from '~/components/footer.vue'
+import LayoutNav from '~/components/nav.vue'
+import LayoutFooter from '~/components/footer.vue'
 
 export default {
   components: {
-    Nav,
-		Footer
+    LayoutNav,
+		LayoutFooter
   }
 }
 </script>
