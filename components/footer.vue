@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="main">
 		<p class="include-failed">Javascript krävs för att visa innehållet på sidan.</p>
 
 		<!--body will be included into all pages-->
@@ -8,7 +8,6 @@
 			<span class="comment">Vi ses på en dojo!</span><br/>
 			<img src="img/mascot/coderfox.png" class="mascot"/>
 		</center>
-
 
 		<footer>
 			<article>

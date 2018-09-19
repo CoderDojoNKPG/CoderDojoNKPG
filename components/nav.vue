@@ -8,7 +8,7 @@
 		<label for="toggleMenu"> </label>
 
 		<nav id="mainMenu">
-			<a href="index">Hem</a>
+			<a href="/">Hem</a>
 			<!--<a href="summercamp.html">SummerCamp</a>-->
 			<a href="koda">Börja koda</a>
 			<a href="blicoach">Bli coach</a>

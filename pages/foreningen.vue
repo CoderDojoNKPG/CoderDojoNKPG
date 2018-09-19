@@ -137,9 +137,5 @@
 				</p>
 			</article>
 		</section>
-
-		<div cd-include="footer.html"> <!--footer.html is included by script, change in footer.html to change footer-->
-			<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
-		</div>
 	</section>
 </template>
