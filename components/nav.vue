@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<header>
 		<p class="include-failed">Javascript krävs för att visa innehållet på sidan.</p>
 
 		<!--body will be included into all pages-->
@@ -8,12 +8,12 @@
 		<label for="toggleMenu"> </label>
 
 		<nav id="mainMenu">
-			<a href="index.html">Hem</a>
+			<a href="index">Hem</a>
 			<!--<a href="summercamp.html">SummerCamp</a>-->
-			<a href="koda.html">Börja koda</a>
-			<a href="blicoach.html">Bli coach</a>
-			<a href="stodoss.html">Stöd oss</a>
-			<a href="foreningen.html">Föreningen</a>
+			<a href="koda">Börja koda</a>
+			<a href="blicoach">Bli coach</a>
+			<a href="stodoss">Stöd oss</a>
+			<a href="foreningen">Föreningen</a>
 		</nav>
-	</div>
+	</header>
 </template>
