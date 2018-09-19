@@ -1,0 +1,9 @@
+{
+  "name": "coderdojonkpg",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^1.4.2"
+  }
+}
