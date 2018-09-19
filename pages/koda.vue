@@ -1,0 +1,389 @@
+<template>
+	<div>
+		<section id="main">
+			<!--<div style="background-image: url(img/ingela.jpg);" id="cover">	</div>--> <!--optional cover image for page-->
+
+			<section class="blocks">
+				<article>
+					<br/>
+					<center>
+						<a href="#first-dojo" class="button">Första dojon</a>
+						<a href="#beginner" class="button">Nybörjare</a>
+						<a href="#advanced" class="button">Fortsättning</a>
+						<!--<a href="#playground" class="button">Circuit Playground</a>-->
+						<a href="#badges" class="button">🏅 Samla badges</a>
+						<a href="#redovisning" class="button">Redovisa</a>
+					</center>
+				</article>
+			</section>
+
+			<h1 id="first-dojo">Första dojon</h1>
+			<section class="blocks">
+				<article>
+					<div class="img"> </div>
+					<h2>Kom igång</h2>
+					<p>Vad roligt att du vill lära dig att programmera! Här hittar du alla länkar du behöver under första dojon och i nybörjargruppen:</p>
+
+					<div class="tips">
+						<a target="_blank" href="https://studio.code.org/flappy/1" style="background-image: url(img/nu/flappy.png)">
+							<div class="title">Flappy Bird</div>
+							<div class="description">Lågstadiet eller över</div>
+						</a>
+						<a target="_blank" href="http://code.org/frozen/" style="background-image: url(img/nu/frozen.png)">
+							<div class="title">Frozen</div>
+							<div class="description">Mellanstadiet eller över</div>
+						</a>
+					</div>
+				</article>
+				<article class="info">
+					<h2>Praktisk info</h2>
+
+					<table>
+						<tr>
+							<td>🙋</td> <td>Fråga först någon vid bordet när du behöver hjälp, sedan räcker du upp handen och så kommer en coach!</td>
+						</tr>
+						<tr>
+							<td>🚫</td> <td>Det råder kodförbud för föräldrar.</td>
+						</tr>
+						<tr>
+							<td>🚽</td> <td>Toaletten finns bredvid entrédörren.</td>
+						</tr>
+						<tr>
+							<td>🍌</td> <td>Vi har fika cirka 12.00.</td>
+						</tr>
+						<tr>
+							<td>👥</td> <td>Cirka 12.45 börjar redovisningen där du kan visa för alla vad du har gjort under Dojon.</td>
+						</tr>
+						<tr>
+							<td>💻</td> <td>Håll utkik på Facebook för anmälan till nästa Dojo!</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+
+			<h1 id="beginner">Nybörjare</h1>
+			<section class="blocks">
+				<article class="bigger">
+					<h2>Fortsätt med fler kodpussel</h2>
+					Vill du klura på fler kodpussel på Code.org som Star Wars eller kanske Minecraft?
+					<div class="tips">
+						<a target="_blank" href="https://studio.code.org/s/mc/stage/1/puzzle/1" style="background-image: url(img/nu/minecraft.png)">
+							<div class="title">Minecraft</div>
+							<div class="description">Lågstadiet eller över</div>
+						</a>
+
+						<a target="_blank" href="https://code.org/starwars" style="background-image: url(img/nu/starwars.png)">
+							<div class="title">Starwars</div>
+							<div class="description">Lågstadiet eller över</div>
+						</a>
+
+						<a target="_blank" href="https://studio.code.org" style="background-image: url(img/nu/codeorg.png)">
+							<div class="title">Code.org</div>
+							<div class="description">Fler kodpussel</div>
+						</a>
+
+						<a target="_blank" href="https://blockly-games.appspot.com" style="background-image: url(img/nu/blockygames.png)">
+							<div class="title">Blockly Games</div>
+							<div class="description">Ännu fler kodpussel</div>
+						</a>
+					</div>
+				</article>
+				<article class="bigger">
+					<h2>Skapa egna spel med Scratch</h2>
+					<p>Du vet hur en loop fungerar (upprepa-blocket)? Då kan du gå vidare till Scratch och skapa egna spel. Skapa ett konto på Scratch för att spara det du gör!</p>
+
+					<p>I gruppen <a href="https://scratch.mit.edu/studios/2056503/">Norrköping Scratch</a> kan du hitta vad andra på CoderDojo Norrköping har gjort.</p>
+
+					<div class="tips">
+						<a target="_blank" href="http://scratch.mit.edu/" style="background-image: url(img/nu/scratch.png)">
+							<div class="title">Scratch</div>
+							<div class="description">Bygg egna spel 🏅</div>
+						</a>
+
+						<a target="_blank" href="http://www.malinc.se/programming/scratch/sv/" style="background-image: url(img/nu/scratch-utmaningar.png)">
+							<div class="title">Scratch utmaningar <span class="tag">NYTT</span></div>
+							<div class="description">Spelideér i Scratch</div>
+						</a>
+
+						<a target="_blank" href="http://projects.codeclubworld.org/sv-SE/01_scratch-1/index.html" style="background-image: url(img/nu/codeclub.png)">
+							<div class="title">Code Club World</div>
+							<div class="description">Tips på Scratchprojekt</div>
+						</a>
+
+						<a target="_blank" href="https://scratch.mit.edu/studios/2056503" style="background-image: url(img/nu/nkpg.png)">
+							<div class="title">Norrköping Scratch</div>
+							<div class="description">Gå med i gruppen</div>
+						</a>
+
+						<a target="_blank" href="https://www.badgecraft.eu/en/projects/3279/badges/22976" style="background-color:white;background-image: url(https://www.badgecraft.eu/storage/badge-class/b8d26687-04c2-4c17-86c8-acb5475c0c85.png)">
+							<div class="title">🏅Scratch #1</div>
+							<div class="description">Gult bälte</div>
+						</a>
+					</div>
+				</article>
+
+				<!--
+				<article>
+					<h2>
+						Veckans badge
+					</h2>
+					<p>
+						Du får gult bälte i Scratch när du har samlat alla fem Scratch nivå 1 badges.
+					</p>
+					<div class="tips">
+
+						<a target="_blank" href="http://scratch.mit.edu/" style="background-image: url(img/nu/scratch.png)">
+							<div class="title">Scratch</div>
+							<div class="description">Bygg egna spel 🏅</div>
+						</a>
+					</div>
+				</article>
+			-->
+				<!--
+				<article class="special">
+					<h3>Dagens tips</h3>
+					<img src="img/mascot/coderfox.png" class="mascot"/>
+					Vi vill tipsa dig om Blocky Games. Där kan du gå från relativt enkla kodpussel i början till väldigt kluriga i senare nivåer. I nivån sköldpadda kan du till exempel lära dig att bli riktigt bra på loopar. De två sista nivåerna kan vara något att testa för fortsättningsgruppen.
+					<div class="tips">
+						<a href="https://blockly-games.appspot.com/turtle?lang=sv" style="background-image: url(img/blockygames.png)">
+							<div>Blocky Games - Sköldpadda</div>
+							<div>Lär dig loopar</div>
+						</a>
+						<a href="https://blockly-games.appspot.com/?lang=sv" style="background-image: url(img/blockygames2.png)">
+							<div>Blocky Games</div>
+							<div>Välj en nivå</div>
+						</a>
+					</div>
+				</article>
+				-->
+			</section>
+
+			<h1 id="advanced">Fortsättning</h1>
+			<section class="blocks">
+				<article class="bigger">
+					<h2>Ny i fortsättingsgruppen?</h2>
+					<p>
+						Att programmera i Scratch är ingen utmaning längre? Kolla följande länkar för att komma igång med skriptspråk som Python eller Javascript!
+					</p>
+					<div class="tips">
+						<a target="_blank" href="https://codecombat.com"  style="background-image: url(img/nu/codecombat.png)">
+							<div class="title">CodeCombat</div>
+							<div class="description">Kodpussel i Python eller Javascript 🏅</div>
+						</a>
+
+						<a target="_blank" href="https://studio.code.org/p/applab" style="background-image: url(img/nu/applab.png)">
+							<div class="title">AppLab</div>
+							<div class="description">Bygg din egen app med block eller Javascript</div>
+						</a>
+
+						<a target="_blank" href="http://silentteacher.toxicode.fr/" style="background-image: url(img/nu/silentteacher.png)">
+							<div class="title">SilentTeacher</div>
+							<div class="description">Gissa vad Javascript-koden gör</div>
+						</a>
+					</div>
+				</article>
+
+				<article>
+					<h2>Avancerade spel</h2>
+					<p>
+						Hjälp Dr. Eval att manövrera till synes omöjliga banor genom att modifiera hans värld via JavaScript. Eller förbättra dina kunskaper i Java genom att lagra buggar i CodeHunt.
+					</p>
+					<div class="tips">
+						<a target="_blank" href="https://alexnisnevich.github.io/untrusted/" style="background-image: url(img/nu/untrusted.png)">
+							<div class="title">Untrusted <span class="tag">EN</span></div>
+							<div class="description">Avancerade pussel i Javascript</div>
+						</a>
+
+						<a target="_blank" href="https://www.codehunt.com" style="background-image: url(img/nu/codehunt.png)">
+							<div class="title">CodeHunt <span class="tag">EN</span></div>
+							<div class="description">Kan du laga den trasiga Java koden?</div>
+						</a>
+					</div>
+				</article>
+
+				<article class="bigger">
+					<h2>Lär dig något nytt</h2>
+					<p>
+						Testa att bygga en app, skapa hemsidor eller lär dig rita animeringar med Processing.
+					</p>
+					<div class="tips">
+						<a target="_blank" href="http://appinventor.mit.edu" style="background-image: url(img/nu/appinventor.png)">
+							<div class="title">App Inventor <span class="tag">EN</span></div>
+							<div class="description">Bygg din egen Android app</div>
+						</a>
+
+						<a target="_blank" href="https://www.khanacademy.org/computing/computer-programming" style="background-image: url(img/nu/khanacademy.png)">
+							<div class="title">Khan Academy <span class="tag">EN</span></div>
+							<div class="description">Lär dig att skapa hemsidor</div>
+						</a>
+
+						<a target="_blank" href="http://www.malinc.se/programming/processing/sv/" style="background-image: url(img/nu/processing_malin.png)">
+							<div class="title">Processing <span class="tag">NYTT</span></div>
+							<div class="description">Kom igång med Processing</div>
+						</a>
+
+						<a target="_blank" href="https://github.com/IngelaRossing/StartProcessing" style="background-image: url(img/nu/processing_ingela.png)">
+							<div class="title">Mera processing</div>
+							<div class="description">Övningar i processing</div>
+						</a>
+
+
+						<a target="_blank" href="https://www.codecademy.com/learn/introduction-to-javascript" style="background-image: url(img/nu/codecademy_js.png)">
+							<div class="title">Codecadamy - Javascript <span class="tag">EN</span> <span class="tag">NYTT</span></div>
+							<div class="description">Lär dig allt om Javascript</div>
+						</a>
+
+
+						<!--
+						<a target="_blank" href="http://wikiskola.se/index.php?title=Javascript_och_spel" style="background-image: url(img/nu/khanspel.png)">
+							<div class="title">Javascript &amp; spel</div>
+							<div class="description">Kom igång med spel i webläsaren</div>
+						</a>
+					-->
+					</div>
+				</article>
+
+				<article>
+					<h2>Resurser för ditt projekt</h2>
+
+					<p>
+						Här hitta du grafik och andra resurser som du kan använda i dina egna projekt (t.ex. i Scratch).
+					</p>
+
+					<div class="tips">
+							<a target="_blank" href="http://kenney.nl/assets" style="background-image: url(img/nu/kenney.png)">
+								<div class="title">Kenney <span class="tag">EN</span></div>
+								<div class="description">Grafik och ljud för spel</div>
+							</a>
+					</div>
+				</article>
+			</section>
+
+
+			<h1 id="playground">AdaFruit Circuit Playground</h1>
+			<section class="blocks">
+				<article>
+					<div class="img" style="background-image: url(img/playground.jpg)"> </div>
+
+					<h2>Kom igång med Playground</h2>
+					<p>
+						Playground är en liten minidator med bland annat små ljus som kan programmeras. Du behöver vara i fortsättningsgruppen för att jobba med Playground. Börja med guiden för att komma igång!
+					</p>
+
+					<a class="button" href="https://docs.google.com/document/d/15DDjL3IZyTlo2NFoiY3DcXQEjCBTyjaQIOK7q1YhDcc/edit?usp=sharing">Guide för Playground</a>
+
+					<p>
+						Har du ingen egen Playground? Fråga en coach om du kan låna en under dojon.
+					</p>
+				</article>
+				<article>
+					<h2>Koda med code.org<span class="tag">EN</span></h2>
+					<ul>
+						<li>Testa kopplingen med <a href="https://studio.code.org/maker/setup">studio.code.org/maker/setup</a></li>
+						<li>Koda på <a href="https://studio.code.org/p/makerlab">MakerLab</a>. Logga in med ditt konto på code.org</li>
+						<li>Du behöver ha din ålder i profilen inställd på minst 13 år.</li>
+					</ul>
+				</article>
+				<article>
+					<h2>Koda med Arduino<span class="tag">EN</span></h2>
+					<ul>
+						<li>Installera <a href="https://learn.adafruit.com/circuit-playground-lesson-number-0/install-software-windows">Arduino IDE</a>. På Windows behöver du också installera drivrutinen.</li>
+						<li>Det finns många exempelprogramm (File->Examples->Adafruit Circuit Playground)</li>
+						<li>Du kan läsa om kommandona i den här <a href="https://caternuson.github.io/Adafruit_CircuitPlayground/">dokumentationen</a></li>
+						<li>Här finns en <a href="https://sv.wikipedia.org/wiki/HTML-färger">tabell med färgerna i RGB</a></li>
+					</ul>
+				</article>
+			</section>
+
+			<h1 id="badges">Samla badges<span class="tag">beta</span></h1>
+			<section class="blocks">
+				<article>
+					<div class="img" style="background-image: url(img/badges/badge-header.png);"> </div> <!-- optional cover image with custom image-->
+					<!--<div class="img"> </div>-->
+					<h2 id="toc_1">Badges på CoderDojo Norrköping</h2>
+					<p>Badges är ett sätt att se hur långt du har kommit i CoderDojo. Premiär nu på lördag 3 februari!</p>
+				</article>
+				<article>
+					<h2 id="toc_3">Börja samla (dator)</h2>
+
+					<p><strong>Registrera dig:</strong></p>
+
+					<ol>
+						<li>Gå till <a href="https://www.badgecraft.eu/en/claim">Badgecraft</a></li>
+						<li>Skriv in koden "dojo1"</li>
+						<li>Skriv in en mailadress + skapa lösenord</li>
+					</ol>
+
+					<p><strong>När du är inloggad:</strong></p>
+
+					<div class="buttons">
+						<a class="button" href="https://www.badgecraft.eu/en/wallet">Se dina badges</a>
+						<a class="button" href="https://www.badgecraft.eu/en/wallet/projects/3279">Se alla badges</a>
+					</div>
+
+					<p>
+						<strong>När du har fått en kod från en coach: </strong> <br/>
+						<div class="buttons">
+							<a class="button" href="https://www.badgecraft.eu/en/claim">🏅 Skriv in kod</a>
+						</div>
+						<p>Grattis, när du accepterar, så har du nu fått en ny badge!</p>
+					</p>
+				</article>
+				<article>
+					<h2 id="toc_4">Börja samla (mobil)</h2>
+					<p><strong>Ladda ner appen och skapa ett konto</strong></p>
+
+					<div class="tips">
+						<a target="_blank" href="https://itunes.apple.com/lt/app/badge-wallet/id1169077003?mt=8" style="background-image: url(img/badges/iphone.png)">
+							<div class="title">iPhone</div>
+							<div class="description">Sök på "Badge Wallet"</div>
+						</a>
+						<a target="_blank" href="https://play.google.com/store/apps/details?id=com.badgecraft" style="background-image: url(img/badges/android.png)">
+							<div class="title">Android</div>
+							<div class="description">Sök på "Badge Wallet"</div>
+						</a>
+					</div>
+
+					<p style="margin-top: -50px">
+						<strong>När du har fått en kod från en coach: </strong>
+					</p>
+					<img src="img/badges/mobile-screenshot-1.png" width="48%"/>
+					<img src="img/badges/mobile-screenshot-2.png" width="48%"/>
+					<i>Klicka "Scan code" och sen "Claim code":</i>
+
+					<!--<ul>
+						<li>När du tycker att du har uppfyllt en badge, meddela en coach som får kontrollera. </li>
+						<li>Om coachen tycker att du lyckats, kommer den att ge dig en kod att skriva in.</li>
+					</ul>-->
+				</article>
+			</section>
+
+
+			<h1 id="redovisning">Redovisa ditt projekt</h1>
+			<section class="blocks">
+				<article>
+					<!--<div class="img" style=""> </div>--> <!-- optional cover image with custom image-->
+					<!--<div class="img"> </div>-->
+					<h2 id="toc_1">Vill du redovisa ditt projekt?</h2>
+					<p>I slutet av dojon kan du visa upp för alla vad du gjorde under dojon (och får redovisningsbadgen). Du behöver bara skriver upp dig här:</p>
+					<div class="buttons">
+						<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeAZcqdPcA7Hmw3hWZuRuyeF2tlNna79VrWnflTH6juOmiHyA/viewform">Redovisa ditt projekt</a>
+					</div>
+				</article>
+			</section>
+
+			<h1 id="feedback">Feedback<span class="tag">beta</span></h1>
+			<section class="blocks">
+				<article>
+					<!--<div class="img" style=""> </div>--> <!-- optional cover image with custom image-->
+					<!--<div class="img"> </div>-->
+					<h2 id="toc_1">Saknar du något på den här sidan?</h2>
+					<p>Om du har hittat en intressant länk som du tycker borde läggas till eller har annat feedback till den här sidan vill vi gärna höra din kommentar!</p>
+					<div class="buttons">
+						<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdBv0IjhWjQ-AarYaTgoxVhOJ1w1OaRIAtkYQV4O_6f8IPw5w/viewform">Skicka in ditt förslag</a>
+					</div>
+				</article>
+			</section>
+		</section>
+	</div>
+</template>

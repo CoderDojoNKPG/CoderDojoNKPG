@@ -1,16 +1,4 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<script type="text/javascript" src="script.js"></script>
-	<title>Föreningen</title>
-</head>
-<body onload="loadIncludes()">
-	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
-		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
-	</header>
-
+<template>
 	<section id="main">
 		<div style="background-image: url(img/grupp.jpg);" id="cover">	</div>
 
@@ -27,7 +15,7 @@
 				</h2>
 
 				<p>
-					CoderDojo Norrköping är en allmännyttig ideell förening med ändamål att främja barns och ungdomars intresse för programmering. CoderDojo Norrköping är en del av en internationell rörelse med syfte att sprida kunskap om programmering och följer i huvudsak <a href="https://coderdojo.com">internationella CoderDojos</a> riktlinjer. 
+					CoderDojo Norrköping är en allmännyttig ideell förening med ändamål att främja barns och ungdomars intresse för programmering. CoderDojo Norrköping är en del av en internationell rörelse med syfte att sprida kunskap om programmering och följer i huvudsak <a href="https://coderdojo.com">internationella CoderDojos</a> riktlinjer.
 				</p>
 				<p>
 					I enlighet med våra stadgar håller vi två stämmor om året där våra medlemmar har möjlighet att ta beslut om föreningens utveckling. Föreningens verksamhet sköts och utvecklas av föreningens styrelse. Mötesprotokoll och liknade publicerar vi som offentliga dokument.
@@ -69,7 +57,7 @@
 			-->
 		</section>
 
-		
+
 		<h1>Vår historia</h1>
 		<section class="blocks">
 			<article>
@@ -122,7 +110,7 @@
 				</ul>
 			</article>
 		</section>
-	
+
 
 		<h1>CoderDojo i...</h1>
 		<section class="blocks">
@@ -154,5 +142,4 @@
 			<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
 		</div>
 	</section>
-</body>
-</html>
+</template>

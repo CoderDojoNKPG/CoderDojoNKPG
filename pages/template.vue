@@ -1,18 +1,4 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=0.7">
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<script type="text/javascript" src="script.js"></script>
-	<title>Page title</title>
-</head>
-<body onload="loadIncludes()">
-	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
-		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
-	</header>
-
-	<iframe src="https://studio.code.org/flappy/1"></iframe>
-
+<template>
 	<section id="main">
 		<!--<div style="background-image: url(img/ingela.jpg);" id="cover">	</div>--> <!--optional cover image for page-->
 		<h1>Page heading</h1>
@@ -60,5 +46,4 @@
 			<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
 		</div>
 	</section>
-</body>
-</html>
+</template>
