@@ -1,0 +1,1416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Lego Digital Designer</title>
+		
+		<style type="text/css">
+			
+			div
+			{
+			    font-family:arial,sans-serif; 
+			    font-size: 11px;
+			    color:#000000;
+			}
+			
+			.header 
+			{
+			    width:1024px;
+			    background-image:url('Building Instructions [Dojorobot]-images/Images/Header.png');
+			    background-repeat:repeat-x;
+			    background-color: #000000;
+			    height:40px;
+			    padding-left:10px;
+			}
+            
+            .headerPrint
+			{
+			    display:none;
+			}
+			
+			.footer
+			{
+			    font-size:10px;
+			    text-align:center;
+			    width:1024px;
+			}
+			
+			.nav
+			{
+			    text-align:center;
+			    width:1024px;
+			}
+			
+			.step
+			{
+			    display:none;
+			}
+
+			.stepdisplay
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			}
+			
+			.modelParts 
+			{ 
+			    list-style-type:none; 
+			    padding:4px 0px 0px 0px; 
+			    margin:0px; 
+			}
+			.modelParts ul 
+			{ 
+			    list-style-type:none; 
+			    float:left; 
+			    padding:5px 0px 0px 5px; 
+			    width:140px; 
+			    border:1px dotted gray; 
+			    margin:0px 
+			 }
+			.modelParts ul li 
+			{ 
+			    padding:0px; 
+			    margin:0px 
+			}
+			.modelParts ul li img 
+			{ 
+			    padding:0px; 
+			    height:64px; 
+			    width:64px; 
+			    margin-left:15px 
+			}
+			
+			.stepTextTop p 
+			{ 
+			    margin:0px; 
+			    padding:10px 0px 0px 0px;  
+			 }
+			.stepText p
+			{ 
+			    margin:0px; 
+			    width:30px; 
+			    padding:25px 0px 0px 10px;
+			}
+            
+            .biElement
+            {
+                float:left;
+                margin:20px;
+                width:280px;
+                
+            }
+            
+            .stepelements
+            {
+                width:1024px;
+			    height:620px;
+                overflow:auto;
+            }
+            
+			
+		</style>
+
+        <style type="text/css" media="print">
+            .nav
+			{
+			    display:none;
+			}
+			
+			.stepdisplay
+			{
+			    display:none;
+			}
+            
+            .stepelements
+			{
+			    display:none;
+			}
+            
+            .header
+			{
+			    display:none;
+			}
+            
+            .headerPrint
+			{
+			    display:block;
+			}
+			
+			.step
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			    page-break-after:always;
+			}
+            
+            .biElement
+            {
+                width:280px;                
+            }
+            
+        </style>
+
+        <script language="javascript" type="text/javascript">
+            
+            var biCurStep=0;
+            
+            function returnTest(e) {
+                var keynum = 0;
+                if (window.event) {
+                    keynum = e.keyCode
+                }
+                else if (e.which) {
+                    keynum = e.which
+                }
+                if (keynum == 13) 
+                {
+                    try {
+                        biStep(parseInt(window.document.getElementById('stepNumber').value,10));
+                    } 
+                    catch(err) {
+                        biStep(0);
+                    }
+                }
+            }
+
+            function biStep(step) {
+
+                if (step>50+1) step=50+1;
+                if (step<0) step=0;
+
+                for (var i=0;i<50+2;i++) {
+                    var id='step_' + i.toString();
+                    var cn='stepdisplay';
+                    if (i==50+1) {
+                        cn='stepelements';
+                        id='step_elements';
+                    }
+                    
+                    if (i==step) {
+                        window.document.getElementById('step_display').innerHTML=window.document.getElementById(id).innerHTML;
+						   window.document.getElementById('step_display').className=cn;
+                    }
+                }
+                window.document.getElementById('stepNumber').value=step.toString();
+                biCurStep=step;
+            }
+        </script>
+	</head>
+	<body onload="biStep(0)">
+        <div class="header"><img src="Building Instructions [Dojorobot]-images/Images/Logo.png" /></div>
+        <div class="headerPrint"><img src="Building Instructions [Dojorobot]-images/Images/Header_print.png" /></div>
+		
+        <div class="stepdisplay" id="step_display"></div>
+
+        <div class="step" id="step_0">
+            <div style="float:left;width:150px"><p>Model Name:<br /><span style="font-weight:bold">Dojorobot</span><br /><br />Number of Bricks: <span style="font-weight:bold">120</span></p></div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step50.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+			
+        <div class="step" id="step_1">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 1 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step1.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_2">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 2 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step2.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_3">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 3 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick4.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step3.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_4">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 4 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick7.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step4.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_5">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 5 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step5.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_6">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 6 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick4.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step6.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_7">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 7 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step7.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_8">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 8 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick10.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step8.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_9">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 9 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step9.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_10">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 10 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick11.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step10.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_11">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 11 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step11.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_12">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 12 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step12.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_13">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 13 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step13.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_14">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 14 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step14.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_15">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 15 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step15.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_16">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 16 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick14.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step16.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_17">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 17 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick15.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick14.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step17.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_18">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 18 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step18.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_19">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 19 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step19.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_20">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 20 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step20.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_21">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 21 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick17.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick18.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step21.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_22">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 22 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick19.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick20.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step22.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_23">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 23 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick19.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick18.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step23.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_24">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 24 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step24.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_25">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 25 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick17.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick20.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step25.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_26">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 26 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick21.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step26.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_27">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 27 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step27.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_28">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 28 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick23.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step28.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_29">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 29 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step29.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_30">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 30 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick25.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step30.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_31">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 31 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step31.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_32">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 32 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step32.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_33">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 33 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick26.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick27.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step33.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_34">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 34 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step34.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_35">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 35 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step35.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_36">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 36 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick28.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step36.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_37">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 37 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step37.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_38">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 38 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick15.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step38.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_39">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 39 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick4.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step39.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_40">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 40 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step40.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_41">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 41 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick4.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick29.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step41.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_42">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 42 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick28.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step42.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_43">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 43 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick30.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step43.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_44">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 44 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step44.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_45">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 45 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step45.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_46">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 46 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick26.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick27.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step46.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_47">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 47 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step47.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_48">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 48 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step48.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_49">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 49 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step49.png" /></div>
+            <div style="clear:both"></div>
+        </div>			
+        <div class="step" id="step_50">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 50 of 50</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="Building Instructions [Dojorobot]-images/Step50.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div class="step" id="step_elements">
+            				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick31.png" /></td>
+					        <td>4587275</td>
+					        <td>WEDGE-BELT WHEEL Ø24 - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick26.png" /></td>
+					        <td>4634091</td>
+					        <td>RIM WIDE 43,2X26 W 6 HOL.Ø 4.8 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick27.png" /></td>
+					        <td>6035364</td>
+					        <td>TYRE LOW WIDE Ø56 X 28 - Black</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick6.png" /></td>
+					        <td>6023956</td>
+					        <td>STEEL BALL - Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>13&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick0.png" /></td>
+					        <td>6024581</td>
+					        <td>CABLE 250 MM - Black,Transparent</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick30.png" /></td>
+					        <td>6008919</td>
+					        <td>MS, EV3, SENSOR, COLOUR - White,Bright Red,Black,Medium Blue,Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick10.png" /></td>
+					        <td>6008916</td>
+					        <td>MS, EV3, GYRO SENSOR - White,Bright Red,Medium Stone Grey,Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick32.png" /></td>
+					        <td>6008472</td>
+					        <td>MS, EV3, TOUCH SENSOR - White,Bright Red,Medium Stone Grey,Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick11.png" /></td>
+					        <td>6008577</td>
+					        <td>SMALL MOTOR - White,Bright Red,Medium Stone Grey,Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick25.png" /></td>
+					        <td>6063629</td>
+					        <td>MS-EV3, ULTRASONIC SENSOR - White,Black,Tr. Red,Medium Stone Grey,Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick1.png" /></td>
+					        <td>6057952</td>
+					        <td>MS 2013 ENGINE - White,Bright Red,Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick16.png" /></td>
+					        <td>6009996</td>
+					        <td>MS-EV3, P-BRICK - White,Transparent,Medium Stone Grey,Dark Stone Grey,Silver Metallic</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick19.png" /></td>
+					        <td>4509376</td>
+					        <td>TECHNIC 3M BEAM - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick4.png" /></td>
+					        <td>4211651</td>
+					        <td>TECHNIC 5M BEAM - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick15.png" /></td>
+					        <td>4495930</td>
+					        <td>TECHNIC 7M BEAM - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick17.png" /></td>
+					        <td>4297199</td>
+					        <td>TECHNIC 7M BEAM - Light Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick21.png" /></td>
+					        <td>4141270</td>
+					        <td>TECHNIC ANG. BEAM 4X2 90 DEG - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick28.png" /></td>
+					        <td>4211866</td>
+					        <td>TECHNIC 9M BEAM - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick12.png" /></td>
+					        <td>4585040</td>
+					        <td>TECHNIC ANG. BEAM 3X5 90 DEG. - White</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick23.png" /></td>
+					        <td>4509912</td>
+					        <td>TECHNIC ANGULAR BEAM 4X4 - White</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick24.png" /></td>
+					        <td>4211624</td>
+					        <td>TECHNIC ANGULAR BEAM 3X7 - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick29.png" /></td>
+					        <td>4112282</td>
+					        <td>TECHNIC ANGULAR BEAM 4X6 - Black</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick8.png" /></td>
+					        <td>4495412</td>
+					        <td>DOUBLE ANGULAR BEAM 3X7 45° - White</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick33.png" /></td>
+					        <td>4142865</td>
+					        <td>2M CROSS AXLE W. GROOVE - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>38&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick2.png" /></td>
+					        <td>4121715</td>
+					        <td>CONNECTOR PEG W. FRICTION - Black</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick22.png" /></td>
+					        <td>4211815</td>
+					        <td>CROSS AXLE 3M - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick3.png" /></td>
+					        <td>4225927</td>
+					        <td>CONNECTOR PEG/CROSS AXLE - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick20.png" /></td>
+					        <td>4211622</td>
+					        <td>BUSH FOR CROSS AXLE - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>10&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick13.png" /></td>
+					        <td>4206482</td>
+					        <td>CONN.BUSH W.FRIC./CROSSALE - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick5.png" /></td>
+					        <td>4514553</td>
+					        <td>CONNECTOR PEG W. FRICTION 3M - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick18.png" /></td>
+					        <td>4211805</td>
+					        <td>CROSS AXLE 7M - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick14.png" /></td>
+					        <td>4121667</td>
+					        <td>DOUBLE CROSS BLOCK - Black</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick9.png" /></td>
+					        <td>4225033</td>
+					        <td>BEAM 3 M. W/4 SNAPS - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="Building Instructions [Dojorobot]-images/Brick7.png" /></td>
+					        <td>4610380</td>
+					        <td>POWER JOINT - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+                
+
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="nav"  class="nav">
+            <table style="margin:0 auto" border="0">
+                <tr>
+                    <td><a onclick="biStep(0);" href="#"><img border="0" alt="First" src="Building Instructions [Dojorobot]-images/Images/Arrow_First.png" /></a></td>
+                    <td><a onclick="biStep(biCurStep-1);" href="#"><img border="0" alt="First" src="Building Instructions [Dojorobot]-images/Images/Arrow_Backward.png" /></a></td>
+                    <td><input id="stepNumber" onkeydown="returnTest(window.event)" type="text" style="text-align:center;width:56px;height:28px;border:1px solid #cccccc;font-size:14px;font-weight:bold" /></td>
+                    <td><a onclick="biStep(biCurStep+1);" href="#"><img border="0" alt="First" src="Building Instructions [Dojorobot]-images/Images/Arrow_Forward.png" /></a></td>
+                    <td><a onclick="biStep(50+1);" href="#"><img border="0" alt="First" src="Building Instructions [Dojorobot]-images/Images/Arrow_Last.png" /></a></td>
+                    <td style="width:40px">&nbsp;</td>
+                    <td><a onclick="window.print();return false;" href="#"><img border="0" alt="Print" src="Building Instructions [Dojorobot]-images/Images/PrintIcon.png" /></a></td>
+                </tr>
+            </table>
+        </div> 
+		<div style="clear:both;">&nbsp;</div>
+		<div class="footer">© 2012 The LEGO Group. All rights reserved.<br />
+Use of the LEGO Digital Designer html print tool, signifies your agreement to the terms of use.</div>
+	</body>
+</html>

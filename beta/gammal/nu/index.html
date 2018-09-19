@@ -1,0 +1,226 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<title>CoderDojo Norrköping</title>
+</head>
+<body onload="updateTimeline()">
+	<header>
+		<a href="http://coderdojonkpg.se"><img src="img/mascot/logo.png" id="logo"/></a> <h1>coderdojonkpg.se/nu<span>beta</span></h1>
+		<nav><a href="#first-dojo">Första dojon</a> | <a href="#beginner">Nybörjare</a> | <a href="#advanced">Fortsättning</a></nav>
+	</header>
+	<section id="timeline" class="invisible">
+		<div class="progress">
+			<div class="bar" id="dojo-progressbar" />
+			<div class="action" style="left:50%;width:13%">🍌🍎</div>
+			<div class="action" style="left:83%;width:17%">🗣👥</div>
+			<div class="marker" id="dojo-marker">Nu</div>
+		</div>
+	</section>
+
+	<section id="notifications">
+		<article class="invisible">
+			<h3>👏 Vill du visa vad du har gjort idag?</h3>
+			<img src="img/mascot/coderlizard.png" class="mascot"/>
+			Namn:
+			Scratch
+		</article>
+	</section>
+
+	<section id="dojo-tips">
+		<h2 id="first-dojo">Första dojon</h2>
+		<section class="container">
+			<article class="beginner">
+				<h3>Kom igång</h3>
+				<p>Vad roligt att du vill lära dig att programmera! Här hittar du alla länkar du behöver under första dojon och i nybörjargruppen:</p>
+				<div class="tips">
+					<a target="_blank" href="https://studio.code.org/flappy/1" style="background-image: url(img/flappy.png)">
+						<div>Flappy Bird</div>
+						<div>Lågstadiet eller över</div>
+					</a>
+					<a target="_blank" href="http://code.org/frozen/" style="background-image: url(img/frozen.png)">
+						<div>Frozen</div>
+						<div>Mellanstadiet eller över</div>
+					</a>
+				</div>
+			</article>
+			<article class="info">
+				<h3>Praktisk info</h3>
+
+				<table>
+					<tr>
+						<td>🙋</td> <td>Fråga först någon vid bordet när du behöver hjälp. Kan ingen hjälpa dig, räck upp handen och så kommer en coach!</td>
+					</tr>
+					<tr>
+						<td>🚫</td> <td>Det råder kodförbud för föräldrar under dojon.</td>
+					</tr>
+					<tr>
+						<td>🚽</td> <td>Toaletten finns bredvid entrédörren.</td>
+					</tr>
+					<tr>
+						<td>🍌</td> <td>Vi har fika cirka 12.00.</td>
+					</tr>
+					<tr>
+						<td>👥</td> <td>Cirka 12.45 börjar redovisningen där du kan visa för alla vad du har gjort under Dojon.</td>
+					</tr>
+					<tr>
+						<td>💻</td> <td>Glöm inte att hålla utkik på Facebook för anmälan till nästa Dojo!</td>
+					</tr>
+				</table>
+			</article>
+		</section>
+
+		<h2 id="beginner">Nybörjare</h2>
+		<section class="container">
+			<article class="beginner">
+				<h3>Fortsätt med fler kodpussel</h3>
+				Vill du klura på fler kodpussel på Code.org som Star Wars eller kanske Minecraft?
+				<div class="tips">
+					<a target="_blank" href="https://code.org/mc" style="background-image: url(img/minecraft.png)">
+						<div>Minecraft</div>
+						<div>Lågstadiet eller över</div>
+					</a>
+					<a target="_blank" href="https://code.org/starwars" style="background-image: url(img/starwars.png)">
+						<div>Star wars</div>
+						<div>Lågstadiet eller över</div>
+					</a>
+					<a target="_blank" href="https://studio.code.org" style="background-image: url(img/codeorg.png)">
+						<div>Code.org</div>
+						<div>Fler kodpussel</div>
+					</a>
+					<a target="_blank" href="https://blockly-games.appspot.com" style="background-image: url(img/blockygames.png)">
+						<div>Blocky Games</div>
+						<div>Ännu fler pussel</div>
+					</a>
+				</div>
+			</article>
+			<article class="beginner">
+				<h3>Skapa egna spel med Scratch</h3>
+				<p>Du vet hur en loop fungerar (upprepa-blocket)? Då kan du gå vidare till Scratch och skapa egna spel. Skapa ett konto på Scratch för att spara det du gör!</p>
+
+				<p>I gruppen <a href="https://scratch.mit.edu/studios/2056503/">Norrköping Scratch</a> kan du hitta vad andra på CoderDojo Norrköping har gjort. Om du vill gå med i gruppen kan du fråga Lukas, som är i fortsättningsgruppen och har skapat gruppen.</p>
+
+				<div class="tips">
+					<a target="_blank" href="http://scratch.mit.edu/" style="background-image: url(img/scratch.png)">
+						<div>Scratch</div>
+						<div>Bygg egna spel</div>
+					</a>
+					<a target="_blank" href="http://projects.codeclubworld.org/sv-SE/01_scratch-1/index.html" style="background-image: url(img/codeclub.png)">
+						<div>Code Club World</div>
+						<div>Tips på Scratchprojekt</div>
+					</a>
+					<a target="_blank" href="https://scratch.mit.edu/studios/2056503" style="background-image: url(img/nkpg.png)">
+						<div>Norrköping Scratch</div>
+						<div>Gå med i vår grupp</div>
+					</a>
+				</div>
+			</article>
+			<!--
+			<article class="special">
+				<h3>Dagens tips</h3>
+				<img src="img/mascot/coderfox.png" class="mascot"/>
+				Vi vill tipsa dig om Blocky Games. Där kan du gå från relativt enkla kodpussel i början till väldigt kluriga i senare nivåer. I nivån sköldpadda kan du till exempel lära dig att bli riktigt bra på loopar. De två sista nivåerna kan vara något att testa för fortsättningsgruppen.
+				<div class="tips">
+					<a href="https://blockly-games.appspot.com/turtle?lang=sv" style="background-image: url(img/blockygames.png)">
+						<div>Blocky Games - Sköldpadda</div>
+						<div>Lär dig loopar</div>
+					</a>
+					<a href="https://blockly-games.appspot.com/?lang=sv" style="background-image: url(img/blockygames2.png)">
+						<div>Blocky Games</div>
+						<div>Välj en nivå</div>
+					</a>
+				</div>
+			</article>
+			-->
+		</section>
+
+		<h2 id="advanced">Fortsättning</h2>
+		<section class="container">
+			<article class="advanced">
+				<h3>Ny i fortsättingsgruppen?</h3>
+				Att programmera i Scratch är ingen utmaning längre? Kolla följande länkar för att komma igång med skriptspråk som Python eller Javascript! 
+
+				<div class="tips">
+					<a target="_blank" href="https://codecombat.com" style="background-image: url(img/codecombat.png)">
+						<div>CodeCombat</div>
+						<div>Kodpussel i Python eller Javascript</div>
+					</a>
+					<a target="_blank" href="https://studio.code.org/p/applab" style="background-image: url(img/applab.png)">
+						<div>AppLab</div>
+						<div>Bygg din egen app med block eller Javascript</div>
+					</a>
+					<a target="_blank" href="http://silentteacher.toxicode.fr/" style="background-image: url(img/silentteacher.png)">
+						<div>SilentTeacher <span class="tag">NYTT</span></div>
+						<div>Gissa vad Javascript-koden gör</div>
+					</a>
+				</div>
+
+				
+			</article>
+
+			<article class="advanced">
+				<h3>Avancerade spel</h3>
+				Hjälp Dr. Eval att manövrera till synes omöjliga banor genom att modifiera hans värld via JavaScript. Eller lär dig programmering med CodinGame där du först på egen hand lär dig tekniker och sedan utmanar andra spelare i multiplayer.
+
+				<div class="tips">
+					<a target="_blank" href="https://alexnisnevich.github.io/untrusted/" style="background-image: url(img/untrusted.png)">
+						<div>Untrusted <span class="tag">EN</span></div>
+						<div>Avancerade pussel i Javascript</div>
+					</a>
+					<a target="_blank" href="https://www.codehunt.com" style="background-image: url(img/codehunt.png)">
+						<div>CodeHunt <span class="tag">EN</span> <span class="tag">NYTT</span></div>
+						<div>Kan du laga den trasiga Java koden?</div>
+					</a>
+				</div>
+			</article>
+
+			<article class="advanced">
+				<h3>Lär dig något nytt</h3>
+				Processing kan användas för att snabbt programmera grafiska program med kod. Hämta filer med övningar (Engelska) från GitHub och dra ner Processing till datorn för att komma igång. 
+				<div class="tips">
+					<a target="_blank" href="http://appinventor.mit.edu" style="background-image: url(img/appinventor.png)">
+						<div>App Inventor <span class="tag">EN</span></div>
+						<div>Bygg din egen Android app</div>
+					</a>
+					<a target="_blank" href="https://www.khanacademy.org/computing/computer-programming" style="background-image: url(img/khanacademy.png)">
+						<div>Khan Academy <span class="tag">EN</span></div>
+						<div>Lär dig att skapa hemsidor</div>
+					</a>
+					<a target="_blank" href="https://processing.org/download/" style="background-image: url(img/processing.png)">
+						<div>Processing 3 <span class="tag">EN</span></div>
+						<div>Installera programmet</div>
+					</a>
+					<a target="_blank" href="https://github.com/IngelaRossing/StartProcessing" style="background-image: url(img/processing_ingela.png)">
+						<div>Processing - Guide <span class="tag">EN</span></div>
+						<div>Kom igång med Processing</div>
+					</a>
+					<a target="_blank" href="http://wikiskola.se/index.php?title=Javascript_och_spel" style="background-image: url(img/khanspel.png)">
+						<div>Javascript &amp; spel <span class="tag">NYTT</span></div>
+						<div>Kom igång med spel i webläsaren</div>
+					</a>
+					<a href="">
+						
+						
+					</a>
+				</div>
+			</article>
+
+		</section>
+	</section>
+	
+	<section id="social">
+		<section class="container">
+			<article class="info">
+				<h3>Instagram</h3>
+				<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2c755f55aef05ff4b276be1a61ffca8e.html" id="lightwidget_2c755f55ae" name="lightwidget_2c755f55ae"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+			</article>
+		</section>
+	</section>
+
+
+
+
+	<p class="footer">© CoderDojo Norrköping 2016</p>
+</body>
+</html>
