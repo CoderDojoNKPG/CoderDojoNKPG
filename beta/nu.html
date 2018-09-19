@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Kom igång och börja koda</title>
+</head>
+<body onload="loadIncludes()">
+	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
+		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
+	</header>
+
+	<section id="main">
+		<!--<div style="background-image: url(img/ingela.jpg);" id="cover">	</div>--> <!--optional cover image for page-->
+		<section class="blocks">
+			<article>
+				<h2>Sidan har flyttats</h2>
+				<center><a href="koda.html" class="button">Gå till nya sidan</a></center>
+			</article>
+		</section>
+	</section>
+	<div cd-include="footer.html"> <!--footer.html is included by script, change in footer.html to change footer-->
+		<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
+	</div>
+</body>
+</html>
