@@ -22,6 +22,9 @@ function loadIncludes() {
 	//start screens
 	updateScreens();
 
+	//analytics
+	loadAnalytics();
+
 	//init fade-in transitions
 	animateHTML().init();
 }
@@ -73,6 +76,27 @@ function updateLinkActive(element) {
 		activeLinks[i].classList.add("active");
 	}
 }
+
+
+/*
+================
+Google Analytics
+================*/
+
+
+function loadAnalytics() {
+	var ga = document.createElement('script');
+	ga.setAttribute('src',"https://www.googletagmanager.com/gtag/js?id=UA-56773077-1");
+	document.head.appendChild(ga);
+
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-56773077-1');
+}
+
+
 
 /* 
 ================
