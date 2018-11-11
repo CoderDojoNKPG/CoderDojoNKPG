@@ -342,6 +342,7 @@ div#cover {
 	flex-grow: 1;
 	margin: 10px;
 	border-radius: 8px;
+	overflow: hidden;
 }
 
 .blocks article.bigger, footer article.bigger {
