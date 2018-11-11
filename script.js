@@ -21,6 +21,12 @@ function loadIncludes() {
 
 	//start screens
 	updateScreens();
+
+	//analytics
+	loadAnalytics();
+
+	//init fade-in transitions
+	animateHTML().init();
 }
 
 
@@ -46,6 +52,8 @@ function loadInclude(element, url, tries = 5) {
 					}
 					elementWithOnload = elementsWithOnloads.iterateNext();
 				}
+
+				animateHTML().init();
 			}
 			else {
 				if (tries > 0) {
@@ -73,6 +81,27 @@ function updateLinkActive(element) {
 		activeLinks[i].classList.add("active");
 	}
 }
+
+
+/*
+================
+Google Analytics
+================*/
+
+
+function loadAnalytics() {
+	var ga = document.createElement('script');
+	ga.setAttribute('src',"https://www.googletagmanager.com/gtag/js?id=UA-56773077-1");
+	document.head.appendChild(ga);
+
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-56773077-1');
+}
+
+
 
 /* 
 ================
@@ -128,7 +157,39 @@ function updateMenuVisible() {
 	}
 }
 
+/* 
+================
+Fade-in transition
+================*/
 
+var animateHTML = function() {
+  var elems;
+  var windowHeight;
+  function init() {
+    elems = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+    addEventHandlers();
+    checkPosition();
+  }
+  function addEventHandlers() {
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+  }
+  function checkPosition() {
+    for (var i = 0; i < elems.length; i++) {
+      var positionFromTop = elems[i].getBoundingClientRect().top;
+      if (positionFromTop - windowHeight <= 0) {
+        elems[i].className = elems[i].className.replace(
+          'hidden',
+          'fade-in-element'
+        );
+      }
+    }
+  }
+  return {
+    init: init
+  };
+};
 
 /*
 ================
