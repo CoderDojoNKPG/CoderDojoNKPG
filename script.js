@@ -30,7 +30,7 @@ function loadIncludes() {
 }
 
 
-function loadInclude(element, url) {
+function loadInclude(element, url, tries = 5) {
 	var http_request = new XMLHttpRequest();
 	http_request.open("GET", url, true);
 	http_request.onreadystatechange = function () {
@@ -54,6 +54,11 @@ function loadInclude(element, url) {
 				}
 
 				animateHTML().init();
+			}
+			else {
+				if (tries > 0) {
+					loadInclude(element, url, tries - 1);
+				}
 			}
 		}
 	};
