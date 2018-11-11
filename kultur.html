@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=0.7">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Kulturnatten</title>
+</head>
+<body onload="loadIncludes()">
+	<header cd-include="nav.html"> <!--nav.html is included by script, change in nav.html to change menu-->
+		<a href="nav.html">[Meny]</a> <!--Fallback when JS disabled, do not change-->
+	</header>
+
+	<section id="main">
+		<!--<div style="background-image: url(img/ingela.jpg);" id="cover">	</div>--> <!--optional cover image for page-->
+
+		<h1>Har du programmerat tidigare?</h1>
+		<section class="blocks">
+			<article>
+				<h2>Nej, jag har inte programmerat tidigare</h2>
+				<p>Lär dig blockprogrammering med Flappy Bird:</p>
+
+				<div class="tips">
+					<a target="_blank" href="https://studio.code.org/flappy/1" style="background-image: url(img/nu/flappy.png)">
+						<div class="title">Flappy Bird</div>
+						<div class="description">code.org</div>
+					</a>
+			</article>
+			<article>
+				<h2>Ja, jag har programmerat tidigare</h3>
+				<p>Skapa ett födelsedagskort med Scratch:</p>
+				<div class="tips">
+					<a target="_blank" href="https://scratch.mit.edu/projects/248931864/" style="background-image: url(img/nu/kalas.png)">
+						<div class="title">Födelsedagskort</div>
+						<div class="description">Scratch</div>
+					</a>
+				</div>
+				<a href="https://docs.google.com/document/d/e/2PACX-1vRYKzh4o8simaegl2u4bWcuo-MfJ5WoXCVqtAWqSsp44cOrWIV7M720jHfvB5jrh3kNp1vkdtmlVac1/pub" class="button">Kom igång guide</a>
+			</article>
+		</section>
+
+		<section class="blocks">
+			<article class="info">
+				<h2>Praktisk info</h2>
+
+				<table>
+					<tr>
+						<td>🙋</td> <td>Fråga en coach om du behöver hjälp! Du kan även fråga andra vid bordet.</td>
+					</tr>
+					<tr>
+						<td>🚫</td> <td>Det råder kodförbud för föräldrar.</td>
+					</tr>
+					<tr>
+						<td>🚽</td> <td>Toaletten finns bredvid entrédörren.</td>
+					</tr>
+					<tr>
+						<td>📃</td> <td>Glöm inte att ta med en flyer innan du går.</td>
+					</tr>
+					<tr>
+						<td>💻</td> <td>Nästa vanliga CoderDojo är på lördag 6:e oktober. Anmälan hittar du på <a href="http://coderdojonkpg.se">coderojonkpg.se</a>!</td>
+					</tr>
+					<tr>
+						<td>📰</td> <td>Följ oss på Facebook och Instagram</td>
+					</tr>
+				</table>
+			</article>
+		</section>	
+
+		<div cd-include="footer.html"> <!--footer.html is included by script, change in footer.html to change footer-->
+			<a href="footer.html">[Footer]</a> <!--Fallback when JS disabled, do not change-->
+		</div>
+	</section>
+</body>
+</html>
