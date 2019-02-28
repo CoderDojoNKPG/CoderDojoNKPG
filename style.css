@@ -350,6 +350,19 @@ div#cover {
 	flex-grow: 3;
 }
 
+.blocks article.person {
+	max-width: 420px;
+	flex-grow: 0.8;
+}
+
+.blocks article.person div.img {
+	height: 15em;
+}
+
+.blocks article.person h2 {
+	margin-bottom: 0;
+}
+
 .blocks article>*:not(.img) {
 	max-width: 600px;
 	margin-left: auto;
