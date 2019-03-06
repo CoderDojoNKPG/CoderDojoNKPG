@@ -351,12 +351,12 @@ div#cover {
 }
 
 .blocks article.person {
-	max-width: 420px;
+	max-width: 480px;
 	flex-grow: 0.8;
 }
 
 .blocks article.person div.img {
-	height: 15em;
+	height: 17em;
 }
 
 .blocks article.person h2 {
