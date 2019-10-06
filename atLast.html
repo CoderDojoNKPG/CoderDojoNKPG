@@ -1,0 +1,177 @@
+<html>
+<head>
+    <script>
+        var delay = 80;
+        var advancedDelay = false;
+        var output;
+        var current;
+        function main() {
+            output = document.getElementById("output");
+            current = output;
+
+            function nbsp(str) {
+                return str.replace(/ /g, "\xa0");
+            }
+
+            var red = "#ff6666";
+            
+            var script = [
+                ["pause", 1000],
+                ["color", "white"],
+                ["delay", 30],
+                "Incoming message",
+
+                ["delay", 700],
+                ["pause", 1000],
+                "...",
+                ["backspace", 3],
+                "...",
+                ["backspace", 3],
+                "...",
+                ["erase"],
+
+                ["color", "white"],
+                ["delay", 30],
+                "-- Message received --\n",
+                nbsp("Username:     "), ["color", "lightgreen"], "Mullvaden\n", ["color", "white"],
+                nbsp("IP:           <encrypted>\n"),
+                nbsp("Location:     <encrypted>\n\n\n"),
+
+                ["pause", 2000],
+
+                ["color", "lightgreen"],
+                ["delay", 40],
+                ["advanced", true],
+                "Fantastiskt! Full spectrum cyber!\n",
+				"Tack vare ert målmedvetna hackande och stora uppfinningsrikedom har jag nu allt jag behöver.\n",
+				"Ni är enastående! Ta emot ert pris från min utsände partner. \n\n",
+ 
+				"Mullvaden out!\n\n",
+ 
+                ["color", "white"],
+                ["delay", 30],
+                ["advanced", true],
+                "-- End of message --",
+				
+				["pause", 30000],
+                ["erase", 5],
+
+            ];
+
+            iterate(script, 0);
+        }
+
+        function iterate(array, index) {
+            var line = array[index];
+            function next() {
+                if (index + 1 < array.length)
+                    iterate(array, index + 1);
+            }
+
+            if (typeof line == "string") {
+                print(line).then(next);
+            }
+            else if (line instanceof Array) {
+                switch (line[0].toLowerCase())
+                {
+                    case "erase":
+                        if (line.length == 1) {
+                            output.innerHTML = "";
+                            current = output;
+                            next();
+                        }
+                        else erase(line[1]).then(next);
+                        break;
+
+                    case "backspace":
+                        current.innerHTML = current.innerHTML.slice(0, current.innerHTML.length - line[1]);
+                        next();
+                        break;
+
+                    case "delay":
+                        delay = line[1];
+                        next();
+                        break;
+
+                    case "advanced":
+                        advancedDelay = line[1];
+                        next();
+                        break;
+
+                    case "pause":
+                        pause(line[1]).then(next);
+                        break;
+
+                    case "atom":
+                        current.innerHTML += line[1];
+                        next();
+                        break;
+
+                    case "color":
+                        var node = document.createElement("span");
+                        output.appendChild(node);
+                        current = node;
+                        current.setAttribute("style", "color: " + line[1]);
+                        next();
+                        break;
+                }
+            }
+            else
+                console.log("Unrecognized type line " + line);
+
+            
+
+        }
+
+        function print(str, index) {
+            if (!index) index = 0;
+            return new Promise(function (resolve) {
+                current.innerHTML += str[index].replace("\n", "<br/>");
+                if (index + 1 < str.length)
+                    setTimeout(function () { print(str, index + 1).then(resolve) },
+                        delay * (advancedDelay ? delayFactor(str[index + 1]) : 1));
+                else
+                    setTimeout(resolve, delay);
+            });
+        }
+
+        function delayFactor(letter) {
+            return Math.pow(2 / ({
+                'a': 9.4, 'b': 1.5, 'c': 1.5, 'd': 4.7, 'e': 10.1, 'f': 2.0, 'g': 2.9, 'h': 2.1, 'i': 5.8, 'j': 0.6, 'k': 3.1,
+                'l': 5.3, 'm': 3.5, 'n': 8.5, 'o': 4.5, 'p': 1.8, 'q': 0.2, 'r': 8.4, 's': 6.6, 't': 7.7, 'u': 1.9, 'v': 2.4,
+                'w': 0.8, 'x': 1.0, 'y': 1.1, 'z': 0.2, 'å': 1.3, 'ä': 1.8, 'ö': 1.3,
+            }[letter] || 2), 0.33);
+        }
+
+        function pause(ms) {
+            return new Promise(function (resolve) {
+                setTimeout(resolve, ms);
+            });
+        }
+
+        function erase(chunksize) {
+            return new Promise(function (resolve) {
+                output.textContent = output.textContent.slice(0, Math.max(0, output.textContent.length - chunksize));
+                output.textContent = output.textContent.slice(chunksize, output.textContent.length);
+                if (output.textContent.length > 0)
+                    setTimeout(function () { erase(chunksize).then(resolve) }, delay);
+                else {
+                    current = output;
+                    resolve();
+                }
+            });
+        }
+
+    </script>
+    <title>Safe Connection</title>
+</head>
+<body style="background-color: black;" onload="main()">
+    <style>
+        #output {
+            color: white;
+            font-family: Consolas;
+        }
+    </style>
+    <div id="output"></div>
+</body>
+</html>
