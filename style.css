@@ -50,7 +50,7 @@ section#main, section.screen {
 
 a, nav a.active, nav a:hover, nav a::before {
 	color: #C3773A; /* Links/buttons */
-	border-color: #C3773A; /* Links/buttons */
+	border-color: #C3773A; /* Links/buttons  */
 }
 
 a.button {
