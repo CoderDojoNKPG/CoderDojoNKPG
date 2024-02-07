@@ -29,6 +29,18 @@ body{
 	background-color: #E6EEEC; /* Footer */
 }
 
+iframe{
+    width: -webkit-fill-available;
+    aspect-ratio: 16 / 9; 
+}
+
+@media screen and (max-width:670px) {
+    iframe{
+        width: 95vw;
+        aspect-ratio: 16 / 9; 
+    }
+}
+
 div.tips a div.description {
 	background-color: rgba(230,238,236,0.95); /*footer*/
 }
