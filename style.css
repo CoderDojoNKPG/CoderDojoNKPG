@@ -646,7 +646,8 @@ article.info table tr td:nth-child(1) {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+  /* deprecated */
+  /* speak: none; */
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -659,7 +660,8 @@ article.info table tr td:nth-child(1) {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+  /* deprecated */
+  /* speak: none; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0em 0.2em;
