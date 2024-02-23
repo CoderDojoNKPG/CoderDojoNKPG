@@ -55,6 +55,22 @@ header {
 	border-bottom-color: #C3773A;
 }
 
+.cover {
+    background-image: url(img/ingela.jpg);
+}
+#imgkoda {
+    background-image: url(img/forvanad.jpg);
+}
+#imgomdojo {
+    background-image: url(img/klassrum.jpg);
+}
+#imgspons {
+    background-image: url(img/gladadeltagare.jpg);
+}
+#imgnystart {
+    background-image: url(img/mascot/logo.png);
+}
+
 section#main, section.screen {
 	background-color: #F9F9F9; /* Body */
 	box-shadow: 0 5px 30px rgba(199,226,218,0.6);/* extra light */
