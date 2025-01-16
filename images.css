@@ -74,7 +74,16 @@
     background-image: url(img/nu/codecademy_js.png)
 }
 
-/* Spel */
+/* Pico 8 */
+.pico8 {
+    background-image: url(img/nu/pico8.png)
+}
+.pico8cheat {
+    background-image: url(img/nu/pico8_cheat.png);
+}
+
+
+/* Spelmotorer */
 .godot {
     background-image: url(img/nu/godot.svg)
 }
@@ -84,6 +93,7 @@
 .unitykurs {
     background-image: url(img/nu/unity.png)
 }
+
 
 /* Appar Med Mera */
 .appinventor {
@@ -101,10 +111,6 @@
 }
 
 /* resurser */
-.kenney {
-    background-image: url(img/nu/kenney.png)
-}
-
 #microbitcover {
     background-image: url(img/nu/microbit.png)
 }
