@@ -34,6 +34,11 @@ iframe{
     aspect-ratio: 16 / 9; 
 }
 
+video{
+    width: 100%;
+    height: auto;
+}
+
 @media screen and (max-width:670px) {
     iframe{
         width: 95vw;
@@ -72,6 +77,10 @@ header {
 }
 #imgnystart {
     background-image: url(img/mascot/logo.png);
+}
+
+#imggodjul {
+    background-image: url(img/microbitgran.jpg);
 }
 
 section#main, section.screen {
